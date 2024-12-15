@@ -1,0 +1,97 @@
+body {
+	background: #111;
+	height: 100vh;
+}
+
+.Background-Animation span {
+	position: fixed;
+	bottom: -180px;
+	height: 50px;
+	width: 50px;
+	z-index: -1;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+	animation: animation 10s linear infinite;
+	transition: all .5s ease;
+	filter: drop-shadow(0 0 20px #0072ff) drop-shadow(0 0 40px #0072ff) drop-shadow(0 0 60px #0072ff);
+}
+
+.Background-Animation span:nth-child(1) {
+	left: 60px;
+	animation-delay: 0.6s;
+}
+
+.Background-Animation span:nth-child(2) {
+	left: 10%;
+	animation-delay: 3s;
+	width: 60px;
+	height: 60px;
+}
+
+.Background-Animation span:nth-child(3) {
+	left: 20%;
+	animation-delay: 2s;
+}
+
+.Background-Animation span:nth-child(4) {
+	left: 30%;
+	animation-delay: 5s;
+	width: 80px;
+	height: 80px;
+}
+
+.Background-Animation span:nth-child(5) {
+	left: 40%;
+	animation-delay: 1s;
+}
+
+.Background-Animation span:nth-child(6) {
+	left: 50%;
+	animation-delay: 7s;
+}
+
+.Background-Animation span:nth-child(7) {
+	left: 60%;
+	animation-delay: 6s;
+	width: 100px;
+	height: 100px;
+}
+
+.Background-Animation span:nth-child(8) {
+	left: 70%;
+	animation-delay: 8s;
+}
+
+.Background-Animation span:nth-child(9) {
+ 	left: 80%;
+	animation-delay: 6s;
+	width: 90px;
+	height: 90px;
+}
+
+.Background-Animation span:nth-child(10) {
+	left: 90%;
+	animation-delay: 4s;
+}
+
+.wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+@keyframes animation {
+	0% {
+		transform: translateY(0);
+		opacity: 1;
+	}
+	80% {
+		opacity: .7;
+	}
+	100% {
+		transform: translateY(-800px) rotate(360deg);
+		opacity: 0;
+	}
+}
