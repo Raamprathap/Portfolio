@@ -89,11 +89,17 @@ body {
 		transform: translateY(-800px);
 		opacity: 0;
 	}
-	20% {
+	10% {
 		opacity: .7;
+	}
+	50% {
+		opacity: 1;
+	}
+	65% {
+		opacity: .3;
 	}
 	100% {
 		transform: translateY(0px) rotate(360deg);
-		opacity: 1;
+		opacity: 0;
 	}
 }
