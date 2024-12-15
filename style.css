@@ -1,7 +1,7 @@
 body {
 	background-image: url("images/bg.avif");
 	background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
 	height: 100vh;
 }
 
@@ -86,14 +86,14 @@ body {
 
 @keyframes animation {
 	0% {
-		transform: translateY(0);
-		opacity: 1;
+		transform: translateY(-800px);
+		opacity: 0;
 	}
-	80% {
+	20% {
 		opacity: .7;
 	}
 	100% {
-		transform: translateY(-800px) rotate(360deg);
-		opacity: 0;
+		transform: translateY(0px) rotate(360deg);
+		opacity: 1;
 	}
 }
