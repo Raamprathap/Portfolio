@@ -1,4 +1,4 @@
-const images = ["images/C.webp", "images/Java.png", "images/Py.png", "images/css.png", "images/js.png", "images/html.png"];
+const assets = ["assets/C.webp", "assets/Java.png", "assets/Py.png", "assets/css.png", "assets/js.png", "assets/html.png"];
 document.addEventListener('DOMContentLoaded', function() {
     const span1 = document.getElementById('span1');
     const span2 = document.getElementById('span2');
@@ -41,41 +41,41 @@ document.addEventListener('DOMContentLoaded', function() {
         let x = 0;
         let i = 0;
         while (i < 10) {
-            x = getRandomInt(0, images.length-1);
+            x = getRandomInt(0, assets.length-1);
             console.log(temp);
             if (!temp.includes(x)){
-                console.log(images[x]);
+                console.log(assets[x]);
                 temp.push(x);
                 switch(i){
                     case 0:
-                        span1.style.backgroundImage = `url(${images[x]})`;
+                        span1.style.backgroundImage = `url(${assets[x]})`;
                         break;
                     case 1:
-                        span5.style.backgroundImage = `url(${images[x]})`;
+                        span5.style.backgroundImage = `url(${assets[x]})`;
                         break;
                     case 2:
-                        span3.style.backgroundImage = `url(${images[x]})`;
+                        span3.style.backgroundImage = `url(${assets[x]})`;
                         break;
                     case 3:
-                        span2.style.backgroundImage = `url(${images[x]})`;
+                        span2.style.backgroundImage = `url(${assets[x]})`;
                         break;
                     case 4:
-                        span10.style.backgroundImage = `url(${images[x]})`;
+                        span10.style.backgroundImage = `url(${assets[x]})`;
                         break;
                     case 5:
-                        span4.style.backgroundImage = `url(${images[x]})`;
+                        span4.style.backgroundImage = `url(${assets[x]})`;
                         break;
                     case 6:
-                        span7.style.backgroundImage = `url(${images[x]})`;
+                        span7.style.backgroundImage = `url(${assets[x]})`;
                         break;
                     case 7:
-                        span9.style.backgroundImage = `url(${images[x]})`;
+                        span9.style.backgroundImage = `url(${assets[x]})`;
                         break;
                     case 8:
-                        span6.style.backgroundImage = `url(${images[x]})`;
+                        span6.style.backgroundImage = `url(${assets[x]})`;
                         break;
                     case 9:
-                        span8.style.backgroundImage = `url(${images[x]})`;
+                        span8.style.backgroundImage = `url(${assets[x]})`;
                         break;
                 }
                 i++;
@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    for(let i = 0; i < images.length; i++) {
+    for(let i = 0; i < assets.length; i++) {
         spans.push(i);
     }
 

@@ -8,7 +8,7 @@
 body {
   height: 100vh;
   background-color: #111;
-  background-image: url("images/bg.avif");
+  background-image: url("assets/bg.avif");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
