@@ -10,7 +10,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const span8 = document.getElementById('span8');
     const span9 = document.getElementById('span9');
     const span10 = document.getElementById('span10');
-    let len = [];
+    let spans = [];
+    const toggleBtn = document.querySelector('.toggle_btn');
+    const toggleBtnIcon = document.querySelector('.toggle_btn i');
+    const dropDownMenu = document.querySelector('.dropdown_menu');
 
     function getRandomInt(min, max) {
         min = Math.ceil(min);
@@ -77,14 +80,23 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
                 i++;
             }
-            if (arraysEqual(len, temp)){
+            if (arraysEqual(spans, temp)){
                 temp = []
             }
         }
     }
 
     for(let i = 0; i < images.length; i++) {
-        len.push(i);
+        spans.push(i);
+    }
+
+    toggleBtn.onclick = function () {
+        dropDownMenu.classList.toggle('open')
+        const isOpen = dropDownMenu.classList.contains('open')
+
+        toggleBtnIcon.classList = isOpen
+        ? 'fa-solid fa-xmark'
+        : 'fa-solid fa-bars'
     }
 
     changeBackground();
