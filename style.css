@@ -35,7 +35,7 @@ body {
 }
 
 .Background-Animation span:nth-child(2) {
-  left: 10%;
+  left: 65%;
   animation-delay: 3s;
   width: 60px;
   height: 60px;
