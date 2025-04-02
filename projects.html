@@ -1,273 +1,639 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Raam Prathap R V</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="pstyle.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-</head>
-<body>
-    <header>
-        <div class="navbar">
-            <div class="logo"><a href="#">Raam Prathap R V</a></div>
-            <ul class="links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#" style="color: rgb(109, 160, 223);">Projects</a></li>
-                <li><a href="resume.html">Resume</a></li>
-            </ul>
-            <button class="action_btn">
-                Contact Me
-                <svg
-                    class="custom-svg"
-                    viewBox="0 0 16 19"
-                    xmlns="http://www.w3.org/2000/svg"
-                >
-                    <path
-                    d="M7 18C7 18.5523 7.44772 19 8 19C8.55228 19 9 18.5523 9 18H7ZM8.70711 0.292893C8.31658 -0.0976311 7.68342 -0.0976311 7.29289 0.292893L0.928932 6.65685C0.538408 7.04738 0.538408 7.68054 0.928932 8.07107C1.31946 8.46159 1.95262 8.46159 2.34315 8.07107L8 2.41421L13.6569 8.07107C14.0474 8.46159 14.6805 8.46159 15.0711 8.07107C15.4616 7.68054 15.4616 7.04738 15.0711 6.65685L8.70711 0.292893ZM9 18L9 1H7L7 18H9Z"
-                    class="custom-path"
-                    ></path>
-                </svg>
-            </button>
-            <div class="toggle_btn">
-                <i class = "fa-solid fa-bars"></i>
-            </div>
-        </div>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Open Sans", sans-serif;
+        user-select: none;
+      }
 
-        <div class="dropdown_menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Projects</a></li>
-            <li><a href="resume.html">Resume</a></li>
-            <li><a href="#" class="action_btn">Contact Me</a></li>
+      body {
+        height: 100vh;
+        background-color: #111;
+        background-image: url("assets/bg.avif");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+      }
+
+      ::-webkit-scrollbar {
+        display: none;
+      }
+
+      header li {
+        list-style: none;
+      }
+
+      header a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 1rem;
+      }
+
+      header a:hover {
+        color: rgb(109, 160, 223);
+      }
+
+      header {
+        position: relative;
+        padding: 0 2rem;
+      }
+
+      .navbar {
+        width: 100%;
+        height: 60px;
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .navbar .logo a {
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+
+      .navbar .links {
+        display: flex;
+        gap: 2rem;
+      }
+
+      .navbar .toggle_btn {
+        color: #fff;
+        font-size: 1.5rem;
+        cursor: pointer;
+        display: none;
+      }
+
+      .action_btn {
+        width: 10em;
+        color: rgb(16, 96, 194);
+        display: flex;
+        justify-content: center;
+        gap: 0.5rem;
+        align-items: center;
+        box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+        font-size: 1rem;
+        font-weight: bold;
+        padding: 0.5em;
+        background-color: #ccc;
+        backdrop-filter: blur(5px);
+        border: 2px solid #f9fafb;
+        border-radius: 9999px;
+        cursor: pointer;
+        overflow: hidden;
+        transition: all 0.7s ease;
+      }
+
+      .action_btn::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: -100%;
+        background-color: rgb(109, 160, 223);
+        border-radius: 9999px;
+        transition: all 0.7s ease;
+        z-index: -10;
+      }
+
+      .action_btn:hover::before {
+        left: 0;
+        transform: scale(1.5);
+      }
+
+      .action_btn:hover {
+        color: #f9fafb;
+      }
+
+      .custom-svg {
+        width: 2rem;
+        height: 2rem;
+        justify-content: flex-end;
+        transition: transform 0.3s ease, background-color 0.3s ease;
+        transform: rotate(45deg);
+        padding: 0.5rem;
+        border: 1px solid #374151;
+        border-radius: 9999px;
+      }
+
+      .action_btn:hover .custom-svg {
+        transform: rotate(90deg);
+        background-color: #f9fafb;
+        border: none;
+      }
+
+      .custom-path {
+        fill: #1f2937;
+      }
+
+      .action_btn:hover .custom-path {
+        fill: #1f2937;
+      }
+
+      .dropdown_menu {
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 2rem;
+        height: 0;
+        width: 300px;
+        z-index: 5;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(20px);
+        border-radius: 10px;
+        overflow: hidden;
+        transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      }
+
+      .dropdown_menu.open {
+        height: 220px;
+      }
+
+      .dropdown_menu li {
+        padding: 0.7rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .dropdown_menu .action_btn {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+
+      main {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 3%;
+      }
+
+      .project {
+        position: relative;
+        max-width: 350px;
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+        border-radius: 20px;
+        margin: 1%;
+        padding: 2rem;
+        color: #fff;
+        text-align: center;
+        transition: all 0.4s ease-in-out;
+      }
+
+      .project:hover {
+        transform: scale(1.05);
+        box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
+      }
+
+      .project img {
+        width: 100%;
+        border-radius: 15px;
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+      }
+
+      .project .Title {
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+        margin: 1rem 0;
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+
+      .project .Title:hover {
+        color: #00d2ff;
+        cursor: pointer;
+      }
+
+      .hover-icon {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: -30px; /* Adjust this to position the icon */
+        font-size: 20px;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+      }
+
+      .Title:hover .hover-icon {
+        opacity: 1;
+      }
+
+      .project ol {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem;
+        padding: 0;
+        margin: 1rem 0;
+      }
+
+      .project ol li {
+        background: linear-gradient(135deg, #ff8a00, #e52e71);
+        padding: 0.5rem 1rem;
+        border-radius: 8px;
+        font-weight: 600;
+        font-size: 0.9rem;
+        letter-spacing: 0.5px;
+        box-shadow: 0 4px 8px rgba(255, 138, 0, 0.3);
+      }
+
+      .line {
+        width: 80%;
+        height: 2px;
+        background: linear-gradient(90deg, #ff8a00, #e52e71);
+        margin: 1rem auto;
+      }
+
+      .project h5 {
+        font-size: 0.9rem;
+        line-height: 1.4;
+        opacity: 0.8;
+      }
+
+      .btn-github {
+        cursor: pointer;
+        display: flex;
+        gap: 0.5rem;
+        border: none;
+        transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+        border-radius: 100px;
+        font-weight: 800;
+        margin: 5% auto;
+        place-content: center;
+        padding: 0.75rem 1rem;
+        font-size: 0.825rem;
+        line-height: 1rem;
+        background-color: rgba(0, 0, 0, 0.4);
+        box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.04),
+          inset 0 0 0 1px rgba(255, 255, 255, 0.04);
+        color: #ccc;
+      }
+
+      .btn-github:hover {
+        box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.08),
+          inset 0 0 0 1px rgba(252, 232, 3, 0.08);
+        color: #fff;
+        transform: translate(0, -0.25rem);
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+
+      .completion-year {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        background: linear-gradient(135deg, #3a7bd5, #00d2ff);
+        padding: 0.3rem 0.7rem;
+        border-radius: 8px;
+        font-size: 0.8rem;
+        font-weight: bold;
+        box-shadow: 0 2px 5px rgba(0, 210, 255, 0.3);
+      }
+
+      @media (max-width: 768px) {
+        .navbar .links,
+        .navbar .action_btn {
+          display: none;
+        }
+
+        .navbar .toggle_btn {
+          display: block;
+        }
+
+        .dropdown_menu {
+          display: block;
+        }
+
+        .project {
+          max-width: 90%;
+          padding: 1.5rem;
+        }
+      }
+
+      @media (max-width: 576px) {
+        .dropdown_menu {
+          left: 2rem;
+          width: unset;
+        }
+
+        .project {
+          max-width: 100%;
+          padding: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="navbar">
+        <div class="logo"><a href="#">Raam Prathap R V</a></div>
+        <ul class="links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html" style="color: rgb(109, 160, 223)">Projects</a></li>
+          <li><a href="resume.html">Resume</a></li>
+        </ul>
+        <button class="action_btn" onclick="window.location.href='contact.html'">
+          Contact Me
+          <svg
+            class="custom-svg"
+            viewBox="0 0 16 19"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M7 18C7 18.5523 7.44772 19 8 19C8.55228 19 9 18.5523 9 18H7ZM8.70711 0.292893C8.31658 -0.0976311 7.68342 -0.0976311 7.29289 0.292893L0.928932 6.65685C0.538408 7.04738 0.538408 7.68054 0.928932 8.07107C1.31946 8.46159 1.95262 8.46159 2.34315 8.07107L8 2.41421L13.6569 8.07107C14.0474 8.46159 14.6805 8.46159 15.0711 8.07107C15.4616 7.68054 15.4616 7.04738 15.0711 6.65685L8.70711 0.292893ZM9 18L9 1H7L7 18H9Z"
+              class="custom-path"
+            ></path>
+          </svg>
+        </button>
+        <div class="toggle_btn">
+          <i class="fa-solid fa-bars"></i>
         </div>
+      </div>
+
+      <div class="dropdown_menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="contact.html" class="action_btn">Contact Me</a></li>
+      </div>
     </header>
     <main>
-        <div class="project animate__animated animate__zoomIn">
-            <img src="assets/proj1.jpg" alt="">
-            <h2>Project Title</h2>
-            <ol>
-                <li>lang</li>
-                <li>lang</li>
-                <li>lang</li>
-            </ol>
-            <div class="line"></div>
-            <h5>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et nemo neque animi, explicabo modi quam consectetur corrupti, iure consequatur in doloribus magni. Quod amet sed minima non delectus, consectetur consequatur!</h5>
-            <button class="btn-github">
-                <svg
-                    width="16"
-                    height="16"
-                    viewBox="0 0 16 16"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-
-                    <path d="M7.99992 1.33331C7.12444 1.33331 6.25753 1.50575 5.4487 1.84078C4.63986 2.17581 3.90493 2.66688 3.28587 3.28593C2.03563 4.53618 1.33325 6.23187 1.33325 7.99998C1.33325 10.9466 3.24659 13.4466 5.89325 14.3333C6.22659 14.3866 6.33325 14.18 6.33325 14C6.33325 13.8466 6.33325 13.4266 6.33325 12.8733C4.48659 13.2733 4.09325 11.98 4.09325 11.98C3.78659 11.2066 3.35325 11 3.35325 11C2.74659 10.5866 3.39992 10.6 3.39992 10.6C4.06659 10.6466 4.41992 11.2866 4.41992 11.2866C4.99992 12.3 5.97992 12 6.35992 11.84C6.41992 11.4066 6.59325 11.1133 6.77992 10.9466C5.29992 10.78 3.74659 10.2066 3.74659 7.66665C3.74659 6.92665 3.99992 6.33331 4.43325 5.85998C4.36659 5.69331 4.13325 4.99998 4.49992 4.09998C4.49992 4.09998 5.05992 3.91998 6.33325 4.77998C6.85992 4.63331 7.43325 4.55998 7.99992 4.55998C8.56659 4.55998 9.13992 4.63331 9.66659 4.77998C10.9399 3.91998 11.4999 4.09998 11.4999 4.09998C11.8666 4.99998 11.6333 5.69331 11.5666 5.85998C11.9999 6.33331 12.2533 6.92665 12.2533 7.66665C12.2533 10.2133 10.6933 10.7733 9.20659 10.94C9.44659 11.1466 9.66659 11.5533 9.66659 12.1733C9.66659 13.0666 9.66659 13.7866 9.66659 14C9.66659 14.18 9.77325 14.3933 10.1133 14.3333C12.7599 13.44 14.6666 10.9466 14.6666 7.99998C14.6666 7.1245 14.4941 6.25759 14.1591 5.44876C13.8241 4.63992 13.333 3.90499 12.714 3.28593C12.0949 2.66688 11.36 2.17581 10.5511 1.84078C9.7423 1.50575 8.8754 1.33331 7.99992 1.33331V1.33331Z"
-                    fill="currentcolor">
-                    </path>
-
-                </svg>
-                <span>View on Github</span>
-            </button>
-        </div>
-        <div class="project animate__animated animate__zoomIn">
-            <img src="assets/proj1.jpg" alt="">
-            <h2>Project Title</h2>
-            <ol>
-                <li>lang</li>
-                <li>lang</li>
-                <li>lang</li>
-            </ol>
-            <div class="line"></div>
-            <h5>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et nemo neque animi, explicabo modi quam consectetur corrupti, iure consequatur in doloribus magni. Quod amet sed minima non delectus, consectetur consequatur!</h5>
-            <button class="btn-github">
-                <svg
-                    width="16"
-                    height="16"
-                    viewBox="0 0 16 16"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-
-                    <path d="M7.99992 1.33331C7.12444 1.33331 6.25753 1.50575 5.4487 1.84078C4.63986 2.17581 3.90493 2.66688 3.28587 3.28593C2.03563 4.53618 1.33325 6.23187 1.33325 7.99998C1.33325 10.9466 3.24659 13.4466 5.89325 14.3333C6.22659 14.3866 6.33325 14.18 6.33325 14C6.33325 13.8466 6.33325 13.4266 6.33325 12.8733C4.48659 13.2733 4.09325 11.98 4.09325 11.98C3.78659 11.2066 3.35325 11 3.35325 11C2.74659 10.5866 3.39992 10.6 3.39992 10.6C4.06659 10.6466 4.41992 11.2866 4.41992 11.2866C4.99992 12.3 5.97992 12 6.35992 11.84C6.41992 11.4066 6.59325 11.1133 6.77992 10.9466C5.29992 10.78 3.74659 10.2066 3.74659 7.66665C3.74659 6.92665 3.99992 6.33331 4.43325 5.85998C4.36659 5.69331 4.13325 4.99998 4.49992 4.09998C4.49992 4.09998 5.05992 3.91998 6.33325 4.77998C6.85992 4.63331 7.43325 4.55998 7.99992 4.55998C8.56659 4.55998 9.13992 4.63331 9.66659 4.77998C10.9399 3.91998 11.4999 4.09998 11.4999 4.09998C11.8666 4.99998 11.6333 5.69331 11.5666 5.85998C11.9999 6.33331 12.2533 6.92665 12.2533 7.66665C12.2533 10.2133 10.6933 10.7733 9.20659 10.94C9.44659 11.1466 9.66659 11.5533 9.66659 12.1733C9.66659 13.0666 9.66659 13.7866 9.66659 14C9.66659 14.18 9.77325 14.3933 10.1133 14.3333C12.7599 13.44 14.6666 10.9466 14.6666 7.99998C14.6666 7.1245 14.4941 6.25759 14.1591 5.44876C13.8241 4.63992 13.333 3.90499 12.714 3.28593C12.0949 2.66688 11.36 2.17581 10.5511 1.84078C9.7423 1.50575 8.8754 1.33331 7.99992 1.33331V1.33331Z"
-                    fill="currentcolor">
-                    </path>
-
-                </svg>
-                <span>View on Github</span>
-            </button>
-        </div>
-        <div class="project animate__animated animate__zoomIn">
-            <img src="assets/proj1.jpg" alt="">
-            <h2>Project Title</h2>
-            <ol>
-                <li>lang</li>
-                <li>lang</li>
-                <li>lang</li>
-            </ol>
-            <div class="line"></div>
-            <h5>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et nemo neque animi, explicabo modi quam consectetur corrupti, iure consequatur in doloribus magni. Quod amet sed minima non delectus, consectetur consequatur!</h5>
-            <button class="btn-github">
-                <svg
-                    width="16"
-                    height="16"
-                    viewBox="0 0 16 16"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-
-                    <path d="M7.99992 1.33331C7.12444 1.33331 6.25753 1.50575 5.4487 1.84078C4.63986 2.17581 3.90493 2.66688 3.28587 3.28593C2.03563 4.53618 1.33325 6.23187 1.33325 7.99998C1.33325 10.9466 3.24659 13.4466 5.89325 14.3333C6.22659 14.3866 6.33325 14.18 6.33325 14C6.33325 13.8466 6.33325 13.4266 6.33325 12.8733C4.48659 13.2733 4.09325 11.98 4.09325 11.98C3.78659 11.2066 3.35325 11 3.35325 11C2.74659 10.5866 3.39992 10.6 3.39992 10.6C4.06659 10.6466 4.41992 11.2866 4.41992 11.2866C4.99992 12.3 5.97992 12 6.35992 11.84C6.41992 11.4066 6.59325 11.1133 6.77992 10.9466C5.29992 10.78 3.74659 10.2066 3.74659 7.66665C3.74659 6.92665 3.99992 6.33331 4.43325 5.85998C4.36659 5.69331 4.13325 4.99998 4.49992 4.09998C4.49992 4.09998 5.05992 3.91998 6.33325 4.77998C6.85992 4.63331 7.43325 4.55998 7.99992 4.55998C8.56659 4.55998 9.13992 4.63331 9.66659 4.77998C10.9399 3.91998 11.4999 4.09998 11.4999 4.09998C11.8666 4.99998 11.6333 5.69331 11.5666 5.85998C11.9999 6.33331 12.2533 6.92665 12.2533 7.66665C12.2533 10.2133 10.6933 10.7733 9.20659 10.94C9.44659 11.1466 9.66659 11.5533 9.66659 12.1733C9.66659 13.0666 9.66659 13.7866 9.66659 14C9.66659 14.18 9.77325 14.3933 10.1133 14.3333C12.7599 13.44 14.6666 10.9466 14.6666 7.99998C14.6666 7.1245 14.4941 6.25759 14.1591 5.44876C13.8241 4.63992 13.333 3.90499 12.714 3.28593C12.0949 2.66688 11.36 2.17581 10.5511 1.84078C9.7423 1.50575 8.8754 1.33331 7.99992 1.33331V1.33331Z"
-                    fill="currentcolor">
-                    </path>
-
-                </svg>
-                <span>View on Github</span>
-            </button>
-        </div>
-        <div class="project animate__animated animate__zoomIn">
-            <img src="assets/proj1.jpg" alt="">
-            <h2>Project Title</h2>
-            <ol>
-                <li>lang</li>
-                <li>lang</li>
-                <li>lang</li>
-            </ol>
-            <div class="line"></div>
-            <h5>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et nemo neque animi, explicabo modi quam consectetur corrupti, iure consequatur in doloribus magni. Quod amet sed minima non delectus, consectetur consequatur!</h5>
-            <button class="btn-github">
-                <svg
-                    width="16"
-                    height="16"
-                    viewBox="0 0 16 16"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-
-                    <path d="M7.99992 1.33331C7.12444 1.33331 6.25753 1.50575 5.4487 1.84078C4.63986 2.17581 3.90493 2.66688 3.28587 3.28593C2.03563 4.53618 1.33325 6.23187 1.33325 7.99998C1.33325 10.9466 3.24659 13.4466 5.89325 14.3333C6.22659 14.3866 6.33325 14.18 6.33325 14C6.33325 13.8466 6.33325 13.4266 6.33325 12.8733C4.48659 13.2733 4.09325 11.98 4.09325 11.98C3.78659 11.2066 3.35325 11 3.35325 11C2.74659 10.5866 3.39992 10.6 3.39992 10.6C4.06659 10.6466 4.41992 11.2866 4.41992 11.2866C4.99992 12.3 5.97992 12 6.35992 11.84C6.41992 11.4066 6.59325 11.1133 6.77992 10.9466C5.29992 10.78 3.74659 10.2066 3.74659 7.66665C3.74659 6.92665 3.99992 6.33331 4.43325 5.85998C4.36659 5.69331 4.13325 4.99998 4.49992 4.09998C4.49992 4.09998 5.05992 3.91998 6.33325 4.77998C6.85992 4.63331 7.43325 4.55998 7.99992 4.55998C8.56659 4.55998 9.13992 4.63331 9.66659 4.77998C10.9399 3.91998 11.4999 4.09998 11.4999 4.09998C11.8666 4.99998 11.6333 5.69331 11.5666 5.85998C11.9999 6.33331 12.2533 6.92665 12.2533 7.66665C12.2533 10.2133 10.6933 10.7733 9.20659 10.94C9.44659 11.1466 9.66659 11.5533 9.66659 12.1733C9.66659 13.0666 9.66659 13.7866 9.66659 14C9.66659 14.18 9.77325 14.3933 10.1133 14.3333C12.7599 13.44 14.6666 10.9466 14.6666 7.99998C14.6666 7.1245 14.4941 6.25759 14.1591 5.44876C13.8241 4.63992 13.333 3.90499 12.714 3.28593C12.0949 2.66688 11.36 2.17581 10.5511 1.84078C9.7423 1.50575 8.8754 1.33331 7.99992 1.33331V1.33331Z"
-                    fill="currentcolor">
-                    </path>
-
-                </svg>
-                <span>View on Github</span>
-            </button>
-        </div>
-        <div class="project animate__animated animate__zoomIn">
-            <img src="assets/proj1.jpg" alt="">
-            <h2>Project Title</h2>
-            <ol>
-                <li>lang</li>
-                <li>lang</li>
-                <li>lang</li>
-            </ol>
-            <div class="line"></div>
-            <h5>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et nemo neque animi, explicabo modi quam consectetur corrupti, iure consequatur in doloribus magni. Quod amet sed minima non delectus, consectetur consequatur!</h5>
-            <button class="btn-github">
-                <svg
-                    width="16"
-                    height="16"
-                    viewBox="0 0 16 16"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-
-                    <path d="M7.99992 1.33331C7.12444 1.33331 6.25753 1.50575 5.4487 1.84078C4.63986 2.17581 3.90493 2.66688 3.28587 3.28593C2.03563 4.53618 1.33325 6.23187 1.33325 7.99998C1.33325 10.9466 3.24659 13.4466 5.89325 14.3333C6.22659 14.3866 6.33325 14.18 6.33325 14C6.33325 13.8466 6.33325 13.4266 6.33325 12.8733C4.48659 13.2733 4.09325 11.98 4.09325 11.98C3.78659 11.2066 3.35325 11 3.35325 11C2.74659 10.5866 3.39992 10.6 3.39992 10.6C4.06659 10.6466 4.41992 11.2866 4.41992 11.2866C4.99992 12.3 5.97992 12 6.35992 11.84C6.41992 11.4066 6.59325 11.1133 6.77992 10.9466C5.29992 10.78 3.74659 10.2066 3.74659 7.66665C3.74659 6.92665 3.99992 6.33331 4.43325 5.85998C4.36659 5.69331 4.13325 4.99998 4.49992 4.09998C4.49992 4.09998 5.05992 3.91998 6.33325 4.77998C6.85992 4.63331 7.43325 4.55998 7.99992 4.55998C8.56659 4.55998 9.13992 4.63331 9.66659 4.77998C10.9399 3.91998 11.4999 4.09998 11.4999 4.09998C11.8666 4.99998 11.6333 5.69331 11.5666 5.85998C11.9999 6.33331 12.2533 6.92665 12.2533 7.66665C12.2533 10.2133 10.6933 10.7733 9.20659 10.94C9.44659 11.1466 9.66659 11.5533 9.66659 12.1733C9.66659 13.0666 9.66659 13.7866 9.66659 14C9.66659 14.18 9.77325 14.3933 10.1133 14.3333C12.7599 13.44 14.6666 10.9466 14.6666 7.99998C14.6666 7.1245 14.4941 6.25759 14.1591 5.44876C13.8241 4.63992 13.333 3.90499 12.714 3.28593C12.0949 2.66688 11.36 2.17581 10.5511 1.84078C9.7423 1.50575 8.8754 1.33331 7.99992 1.33331V1.33331Z"
-                    fill="currentcolor">
-                    </path>
-
-                </svg>
-                <span>View on Github</span>
-            </button>
-        </div>
-        <div class="project animate__animated animate__zoomIn">
-            <img src="assets/proj1.jpg" alt="">
-            <h2>Project Title</h2>
-            <ol>
-                <li>lang</li>
-                <li>lang</li>
-                <li>lang</li>
-            </ol>
-            <div class="line"></div>
-            <h5>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et nemo neque animi, explicabo modi quam consectetur corrupti, iure consequatur in doloribus magni. Quod amet sed minima non delectus, consectetur consequatur!</h5>
-            <button class="btn-github">
-                <svg
-                    width="16"
-                    height="16"
-                    viewBox="0 0 16 16"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-
-                    <path d="M7.99992 1.33331C7.12444 1.33331 6.25753 1.50575 5.4487 1.84078C4.63986 2.17581 3.90493 2.66688 3.28587 3.28593C2.03563 4.53618 1.33325 6.23187 1.33325 7.99998C1.33325 10.9466 3.24659 13.4466 5.89325 14.3333C6.22659 14.3866 6.33325 14.18 6.33325 14C6.33325 13.8466 6.33325 13.4266 6.33325 12.8733C4.48659 13.2733 4.09325 11.98 4.09325 11.98C3.78659 11.2066 3.35325 11 3.35325 11C2.74659 10.5866 3.39992 10.6 3.39992 10.6C4.06659 10.6466 4.41992 11.2866 4.41992 11.2866C4.99992 12.3 5.97992 12 6.35992 11.84C6.41992 11.4066 6.59325 11.1133 6.77992 10.9466C5.29992 10.78 3.74659 10.2066 3.74659 7.66665C3.74659 6.92665 3.99992 6.33331 4.43325 5.85998C4.36659 5.69331 4.13325 4.99998 4.49992 4.09998C4.49992 4.09998 5.05992 3.91998 6.33325 4.77998C6.85992 4.63331 7.43325 4.55998 7.99992 4.55998C8.56659 4.55998 9.13992 4.63331 9.66659 4.77998C10.9399 3.91998 11.4999 4.09998 11.4999 4.09998C11.8666 4.99998 11.6333 5.69331 11.5666 5.85998C11.9999 6.33331 12.2533 6.92665 12.2533 7.66665C12.2533 10.2133 10.6933 10.7733 9.20659 10.94C9.44659 11.1466 9.66659 11.5533 9.66659 12.1733C9.66659 13.0666 9.66659 13.7866 9.66659 14C9.66659 14.18 9.77325 14.3933 10.1133 14.3333C12.7599 13.44 14.6666 10.9466 14.6666 7.99998C14.6666 7.1245 14.4941 6.25759 14.1591 5.44876C13.8241 4.63992 13.333 3.90499 12.714 3.28593C12.0949 2.66688 11.36 2.17581 10.5511 1.84078C9.7423 1.50575 8.8754 1.33331 7.99992 1.33331V1.33331Z"
-                    fill="currentcolor">
-                    </path>
-
-                </svg>
-                <span>View on Github</span>
-            </button>
-        </div>
-        <div class="project animate__animated animate__zoomIn">
-            <img src="assets/proj1.jpg" alt="">
-            <h2>Project Title</h2>
-            <ol>
-                <li>lang</li>
-                <li>lang</li>
-                <li>lang</li>
-            </ol>
-            <div class="line"></div>
-            <h5>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et nemo neque animi, explicabo modi quam consectetur corrupti, iure consequatur in doloribus magni. Quod amet sed minima non delectus, consectetur consequatur!</h5>
-            <button class="btn-github">
-                <svg
-                    width="16"
-                    height="16"
-                    viewBox="0 0 16 16"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-
-                    <path d="M7.99992 1.33331C7.12444 1.33331 6.25753 1.50575 5.4487 1.84078C4.63986 2.17581 3.90493 2.66688 3.28587 3.28593C2.03563 4.53618 1.33325 6.23187 1.33325 7.99998C1.33325 10.9466 3.24659 13.4466 5.89325 14.3333C6.22659 14.3866 6.33325 14.18 6.33325 14C6.33325 13.8466 6.33325 13.4266 6.33325 12.8733C4.48659 13.2733 4.09325 11.98 4.09325 11.98C3.78659 11.2066 3.35325 11 3.35325 11C2.74659 10.5866 3.39992 10.6 3.39992 10.6C4.06659 10.6466 4.41992 11.2866 4.41992 11.2866C4.99992 12.3 5.97992 12 6.35992 11.84C6.41992 11.4066 6.59325 11.1133 6.77992 10.9466C5.29992 10.78 3.74659 10.2066 3.74659 7.66665C3.74659 6.92665 3.99992 6.33331 4.43325 5.85998C4.36659 5.69331 4.13325 4.99998 4.49992 4.09998C4.49992 4.09998 5.05992 3.91998 6.33325 4.77998C6.85992 4.63331 7.43325 4.55998 7.99992 4.55998C8.56659 4.55998 9.13992 4.63331 9.66659 4.77998C10.9399 3.91998 11.4999 4.09998 11.4999 4.09998C11.8666 4.99998 11.6333 5.69331 11.5666 5.85998C11.9999 6.33331 12.2533 6.92665 12.2533 7.66665C12.2533 10.2133 10.6933 10.7733 9.20659 10.94C9.44659 11.1466 9.66659 11.5533 9.66659 12.1733C9.66659 13.0666 9.66659 13.7866 9.66659 14C9.66659 14.18 9.77325 14.3933 10.1133 14.3333C12.7599 13.44 14.6666 10.9466 14.6666 7.99998C14.6666 7.1245 14.4941 6.25759 14.1591 5.44876C13.8241 4.63992 13.333 3.90499 12.714 3.28593C12.0949 2.66688 11.36 2.17581 10.5511 1.84078C9.7423 1.50575 8.8754 1.33331 7.99992 1.33331V1.33331Z"
-                    fill="currentcolor">
-                    </path>
-
-                </svg>
-                <span>View on Github</span>
-            </button>
-        </div>
-        <div class="project animate__animated animate__zoomIn">
-            <img src="assets/proj1.jpg" alt="">
-            <h2>Project Title</h2>
-            <ol>
-                <li>lang</li>
-                <li>lang</li>
-                <li>lang</li>
-            </ol>
-            <div class="line"></div>
-            <h5>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et nemo neque animi, explicabo modi quam consectetur corrupti, iure consequatur in doloribus magni. Quod amet sed minima non delectus, consectetur consequatur!</h5>
-            <button class="btn-github">
-                <svg
-                    width="16"
-                    height="16"
-                    viewBox="0 0 16 16"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-
-                    <path d="M7.99992 1.33331C7.12444 1.33331 6.25753 1.50575 5.4487 1.84078C4.63986 2.17581 3.90493 2.66688 3.28587 3.28593C2.03563 4.53618 1.33325 6.23187 1.33325 7.99998C1.33325 10.9466 3.24659 13.4466 5.89325 14.3333C6.22659 14.3866 6.33325 14.18 6.33325 14C6.33325 13.8466 6.33325 13.4266 6.33325 12.8733C4.48659 13.2733 4.09325 11.98 4.09325 11.98C3.78659 11.2066 3.35325 11 3.35325 11C2.74659 10.5866 3.39992 10.6 3.39992 10.6C4.06659 10.6466 4.41992 11.2866 4.41992 11.2866C4.99992 12.3 5.97992 12 6.35992 11.84C6.41992 11.4066 6.59325 11.1133 6.77992 10.9466C5.29992 10.78 3.74659 10.2066 3.74659 7.66665C3.74659 6.92665 3.99992 6.33331 4.43325 5.85998C4.36659 5.69331 4.13325 4.99998 4.49992 4.09998C4.49992 4.09998 5.05992 3.91998 6.33325 4.77998C6.85992 4.63331 7.43325 4.55998 7.99992 4.55998C8.56659 4.55998 9.13992 4.63331 9.66659 4.77998C10.9399 3.91998 11.4999 4.09998 11.4999 4.09998C11.8666 4.99998 11.6333 5.69331 11.5666 5.85998C11.9999 6.33331 12.2533 6.92665 12.2533 7.66665C12.2533 10.2133 10.6933 10.7733 9.20659 10.94C9.44659 11.1466 9.66659 11.5533 9.66659 12.1733C9.66659 13.0666 9.66659 13.7866 9.66659 14C9.66659 14.18 9.77325 14.3933 10.1133 14.3333C12.7599 13.44 14.6666 10.9466 14.6666 7.99998C14.6666 7.1245 14.4941 6.25759 14.1591 5.44876C13.8241 4.63992 13.333 3.90499 12.714 3.28593C12.0949 2.66688 11.36 2.17581 10.5511 1.84078C9.7423 1.50575 8.8754 1.33331 7.99992 1.33331V1.33331Z"
-                    fill="currentcolor">
-                    </path>
-
-                </svg>
-                <span>View on Github</span>
-            </button>
-        </div>
+      <div class="project animate__animated animate__zoomIn">
+        <div class="completion-year">2025</div>
+        <img src="assets/proj1.jpg" alt="" />
+        <h2
+          class="Title"
+          onclick="window.open('https://sociogram-v2.onrender.com/', '_blank')"
+        >
+          Sociogram-v2
+          <span class="hover-icon">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </span>
+        </h2>
+        <ol>
+          <li>React</li>
+          <li>Vite</li>
+          <li>Tailwind</li>
+          <li>Node.js</li>
+          <li>Express.js</li>
+        </ol>
+        <div class="line"></div>
+        <h5>
+          Sociogram v2 is a modern chat application that allows users to send
+          text messages and images to registered users via email authentication.
+          Built with React, Node.js, and MongoDB, it offers real-time messaging,
+          secure authentication, and cloud-based image storage for a seamless
+          communication experience.
+        </h5>
+        <button
+          class="btn-github"
+          onclick="window.open('https://github.com/Raamprathap/Sociogram-v2', '_blank')"
+        >
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 16 16"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M7.99992 1.33331C7.12444 1.33331 6.25753 1.50575 5.4487 1.84078C4.63986 2.17581 3.90493 2.66688 3.28587 3.28593C2.03563 4.53618 1.33325 6.23187 1.33325 7.99998C1.33325 10.9466 3.24659 13.4466 5.89325 14.3333C6.22659 14.3866 6.33325 14.18 6.33325 14C6.33325 13.8466 6.33325 13.4266 6.33325 12.8733C4.48659 13.2733 4.09325 11.98 4.09325 11.98C3.78659 11.2066 3.35325 11 3.35325 11C2.74659 10.5866 3.39992 10.6 3.39992 10.6C4.06659 10.6466 4.41992 11.2866 4.41992 11.2866C4.99992 12.3 5.97992 12 6.35992 11.84C6.41992 11.4066 6.59325 11.1133 6.77992 10.9466C5.29992 10.78 3.74659 10.2066 3.74659 7.66665C3.74659 6.92665 3.99992 6.33331 4.43325 5.85998C4.36659 5.69331 4.13325 4.99998 4.49992 4.09998C4.49992 4.09998 5.05992 3.91998 6.33325 4.77998C6.85992 4.63331 7.43325 4.55998 7.99992 4.55998C8.56659 4.55998 9.13992 4.63331 9.66659 4.77998C10.9399 3.91998 11.4999 4.09998 11.4999 4.09998C11.8666 4.99998 11.6333 5.69331 11.5666 5.85998C11.9999 6.33331 12.2533 6.92665 12.2533 7.66665C12.2533 10.2133 10.6933 10.7733 9.20659 10.94C9.44659 11.1466 9.66659 11.5533 9.66659 12.1733C9.66659 13.0666 9.66659 13.7866 9.66659 14C9.66659 14.18 9.77325 14.3933 10.1133 14.3333C12.7599 13.44 14.6666 10.9466 14.6666 7.99998C14.6666 7.1245 14.4941 6.25759 14.1591 5.44876C13.8241 4.63992 13.333 3.90499 12.714 3.28593C12.0949 2.66688 11.36 2.17581 10.5511 1.84078C9.7423 1.50575 8.8754 1.33331 7.99992 1.33331V1.33331Z"
+              fill="currentcolor"
+            ></path>
+          </svg>
+          <span>View on Github</span>
+        </button>
+      </div>
+      <div class="project animate__animated animate__zoomIn">
+        <div class="completion-year">2025</div>
+        <img src="assets/proj1.jpg" alt="" />
+        <h2
+          class="Title"
+          onclick="window.open('https://sociogram-v1.onrender.com/', '_blank')"
+        >
+          Sociogram-v1
+          <span class="hover-icon">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </span>
+        </h2>
+        <ol>
+          <li>React</li>
+          <li>firebase</li>
+        </ol>
+        <div class="line"></div>
+        <h5>
+          Sociogram is a modern social media platform where users can sign in
+          securely, and chat in real-time. Built with React for the frontend and
+          Firebase for backend services like authentication and data storage,
+          Sociogram offers a user-friendly interface and seamless performance.
+          Whether connecting with friends or sharing moments, Sociogram provides
+          a robust platform for social interaction.
+        </h5>
+        <button
+          class="btn-github"
+          onclick="window.open('https://github.com/Raamprathap/Sociogram-v1', '_blank')"
+        >
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 16 16"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M7.99992 1.33331C7.12444 1.33331 6.25753 1.50575 5.4487 1.84078C4.63986 2.17581 3.90493 2.66688 3.28587 3.28593C2.03563 4.53618 1.33325 6.23187 1.33325 7.99998C1.33325 10.9466 3.24659 13.4466 5.89325 14.3333C6.22659 14.3866 6.33325 14.18 6.33325 14C6.33325 13.8466 6.33325 13.4266 6.33325 12.8733C4.48659 13.2733 4.09325 11.98 4.09325 11.98C3.78659 11.2066 3.35325 11 3.35325 11C2.74659 10.5866 3.39992 10.6 3.39992 10.6C4.06659 10.6466 4.41992 11.2866 4.41992 11.2866C4.99992 12.3 5.97992 12 6.35992 11.84C6.41992 11.4066 6.59325 11.1133 6.77992 10.9466C5.29992 10.78 3.74659 10.2066 3.74659 7.66665C3.74659 6.92665 3.99992 6.33331 4.43325 5.85998C4.36659 5.69331 4.13325 4.99998 4.49992 4.09998C4.49992 4.09998 5.05992 3.91998 6.33325 4.77998C6.85992 4.63331 7.43325 4.55998 7.99992 4.55998C8.56659 4.55998 9.13992 4.63331 9.66659 4.77998C10.9399 3.91998 11.4999 4.09998 11.4999 4.09998C11.8666 4.99998 11.6333 5.69331 11.5666 5.85998C11.9999 6.33331 12.2533 6.92665 12.2533 7.66665C12.2533 10.2133 10.6933 10.7733 9.20659 10.94C9.44659 11.1466 9.66659 11.5533 9.66659 12.1733C9.66659 13.0666 9.66659 13.7866 9.66659 14C9.66659 14.18 9.77325 14.3933 10.1133 14.3333C12.7599 13.44 14.6666 10.9466 14.6666 7.99998C14.6666 7.1245 14.4941 6.25759 14.1591 5.44876C13.8241 4.63992 13.333 3.90499 12.714 3.28593C12.0949 2.66688 11.36 2.17581 10.5511 1.84078C9.7423 1.50575 8.8754 1.33331 7.99992 1.33331V1.33331Z"
+              fill="currentcolor"
+            ></path>
+          </svg>
+          <span>View on Github</span>
+        </button>
+      </div>
+      <div class="project animate__animated animate__zoomIn">
+        <div class="completion-year">2024</div>
+        <img src="assets/proj1.jpg" alt="" />
+        <h2
+          class="Title"
+          onclick="window.open('https://post-accident-alert-system.onrender.com', '_blank')"
+        >
+          PAAS
+          <span class="hover-icon">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </span>
+        </h2>
+        <ol>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JS</li>
+          <li>Node.js</li>
+          <li>Express.js</li>
+          <li>Websocket</li>
+        </ol>
+        <div class="line"></div>
+        <h5>
+          Post Accident Alert System is a real-time road safety and emergency
+          response platform for clients, drivers, and hospitals to manage
+          accident alerts efficiently. It features interactive dashboards,
+          automated alerts, and real-time tracking for quick emergency handling,
+          ensuring faster response and improved road safety.
+        </h5>
+        <button
+          class="btn-github"
+          onclick="window.open('https://github.com/Raamprathap/Post-Accident-Alert-System-Frontend', '_blank')"
+        >
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 16 16"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M7.99992 1.33331C7.12444 1.33331 6.25753 1.50575 5.4487 1.84078C4.63986 2.17581 3.90493 2.66688 3.28587 3.28593C2.03563 4.53618 1.33325 6.23187 1.33325 7.99998C1.33325 10.9466 3.24659 13.4466 5.89325 14.3333C6.22659 14.3866 6.33325 14.18 6.33325 14C6.33325 13.8466 6.33325 13.4266 6.33325 12.8733C4.48659 13.2733 4.09325 11.98 4.09325 11.98C3.78659 11.2066 3.35325 11 3.35325 11C2.74659 10.5866 3.39992 10.6 3.39992 10.6C4.06659 10.6466 4.41992 11.2866 4.41992 11.2866C4.99992 12.3 5.97992 12 6.35992 11.84C6.41992 11.4066 6.59325 11.1133 6.77992 10.9466C5.29992 10.78 3.74659 10.2066 3.74659 7.66665C3.74659 6.92665 3.99992 6.33331 4.43325 5.85998C4.36659 5.69331 4.13325 4.99998 4.49992 4.09998C4.49992 4.09998 5.05992 3.91998 6.33325 4.77998C6.85992 4.63331 7.43325 4.55998 7.99992 4.55998C8.56659 4.55998 9.13992 4.63331 9.66659 4.77998C10.9399 3.91998 11.4999 4.09998 11.4999 4.09998C11.8666 4.99998 11.6333 5.69331 11.5666 5.85998C11.9999 6.33331 12.2533 6.92665 12.2533 7.66665C12.2533 10.2133 10.6933 10.7733 9.20659 10.94C9.44659 11.1466 9.66659 11.5533 9.66659 12.1733C9.66659 13.0666 9.66659 13.7866 9.66659 14C9.66659 14.18 9.77325 14.3933 10.1133 14.3333C12.7599 13.44 14.6666 10.9466 14.6666 7.99998C14.6666 7.1245 14.4941 6.25759 14.1591 5.44876C13.8241 4.63992 13.333 3.90499 12.714 3.28593C12.0949 2.66688 11.36 2.17581 10.5511 1.84078C9.7423 1.50575 8.8754 1.33331 7.99992 1.33331V1.33331Z"
+              fill="currentcolor"
+            ></path>
+          </svg>
+          <span>View on Github</span>
+        </button>
+      </div>
+      <div class="project animate__animated animate__zoomIn">
+        <div class="completion-year">2024</div>
+        <img src="assets/proj1.jpg" alt="" />
+        <h2
+          class="Title"
+          onclick="window.open('https://ria-photography.onrender.com', '_blank')"
+        >
+          Ria Photography
+          <span class="hover-icon">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </span>
+        </h2>
+        <ol>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JS</li>
+          <li>Python (Flask)</li>
+        </ol>
+        <div class="line"></div>
+        <h5>
+          RIA Photography is a studio website showcasing stunning photography
+          with a seamless booking system that stores user details in a Google
+          Sheet. Built with HTML, CSS, JavaScript, and Flask, it offers a smooth
+          user experience with an interactive gallery and a cinematic films
+          section.
+        </h5>
+        <button
+          class="btn-github"
+          onclick="window.open('https://github.com/Raamprathap/Ria-Photography', '_blank')"
+        >
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 16 16"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M7.99992 1.33331C7.12444 1.33331 6.25753 1.50575 5.4487 1.84078C4.63986 2.17581 3.90493 2.66688 3.28587 3.28593C2.03563 4.53618 1.33325 6.23187 1.33325 7.99998C1.33325 10.9466 3.24659 13.4466 5.89325 14.3333C6.22659 14.3866 6.33325 14.18 6.33325 14C6.33325 13.8466 6.33325 13.4266 6.33325 12.8733C4.48659 13.2733 4.09325 11.98 4.09325 11.98C3.78659 11.2066 3.35325 11 3.35325 11C2.74659 10.5866 3.39992 10.6 3.39992 10.6C4.06659 10.6466 4.41992 11.2866 4.41992 11.2866C4.99992 12.3 5.97992 12 6.35992 11.84C6.41992 11.4066 6.59325 11.1133 6.77992 10.9466C5.29992 10.78 3.74659 10.2066 3.74659 7.66665C3.74659 6.92665 3.99992 6.33331 4.43325 5.85998C4.36659 5.69331 4.13325 4.99998 4.49992 4.09998C4.49992 4.09998 5.05992 3.91998 6.33325 4.77998C6.85992 4.63331 7.43325 4.55998 7.99992 4.55998C8.56659 4.55998 9.13992 4.63331 9.66659 4.77998C10.9399 3.91998 11.4999 4.09998 11.4999 4.09998C11.8666 4.99998 11.6333 5.69331 11.5666 5.85998C11.9999 6.33331 12.2533 6.92665 12.2533 7.66665C12.2533 10.2133 10.6933 10.7733 9.20659 10.94C9.44659 11.1466 9.66659 11.5533 9.66659 12.1733C9.66659 13.0666 9.66659 13.7866 9.66659 14C9.66659 14.18 9.77325 14.3933 10.1133 14.3333C12.7599 13.44 14.6666 10.9466 14.6666 7.99998C14.6666 7.1245 14.4941 6.25759 14.1591 5.44876C13.8241 4.63992 13.333 3.90499 12.714 3.28593C12.0949 2.66688 11.36 2.17581 10.5511 1.84078C9.7423 1.50575 8.8754 1.33331 7.99992 1.33331V1.33331Z"
+              fill="currentcolor"
+            ></path>
+          </svg>
+          <span>View on Github</span>
+        </button>
+      </div>
+      <div class="project animate__animated animate__zoomIn">
+        <div class="completion-year">2024</div>
+        <img src="assets/proj1.jpg" alt="" />
+        <h2
+          class="Title"
+          onclick="window.open('https://birds-species-classifier.onrender.com', '_blank')"
+        >
+          Bird-Species-Classifier
+          <span class="hover-icon">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </span>
+        </h2>
+        <ol>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JS</li>
+          <li>Python (Flask)</li>
+          <li>Tensorflow</li>
+          <li>Keras</li>
+        </ol>
+        <div class="line"></div>
+        <h5>
+          This project is a Bird Species Classifier that uses a deep learning
+          model to identify bird species from images. It is trained on a dataset
+          of categorized bird images and deployed as a web application. Users
+          can upload an image, and the model predicts the bird species. The
+          system is built using TensorFlow/Keras for training and Flask for
+          deployment, with the model hosted separately for efficient inference.
+        </h5>
+        <button
+          class="btn-github"
+          onclick="window.open('https://github.com/Raamprathap/Birds-Species-Classifier', '_blank')"
+        >
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 16 16"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M7.99992 1.33331C7.12444 1.33331 6.25753 1.50575 5.4487 1.84078C4.63986 2.17581 3.90493 2.66688 3.28587 3.28593C2.03563 4.53618 1.33325 6.23187 1.33325 7.99998C1.33325 10.9466 3.24659 13.4466 5.89325 14.3333C6.22659 14.3866 6.33325 14.18 6.33325 14C6.33325 13.8466 6.33325 13.4266 6.33325 12.8733C4.48659 13.2733 4.09325 11.98 4.09325 11.98C3.78659 11.2066 3.35325 11 3.35325 11C2.74659 10.5866 3.39992 10.6 3.39992 10.6C4.06659 10.6466 4.41992 11.2866 4.41992 11.2866C4.99992 12.3 5.97992 12 6.35992 11.84C6.41992 11.4066 6.59325 11.1133 6.77992 10.9466C5.29992 10.78 3.74659 10.2066 3.74659 7.66665C3.74659 6.92665 3.99992 6.33331 4.43325 5.85998C4.36659 5.69331 4.13325 4.99998 4.49992 4.09998C4.49992 4.09998 5.05992 3.91998 6.33325 4.77998C6.85992 4.63331 7.43325 4.55998 7.99992 4.55998C8.56659 4.55998 9.13992 4.63331 9.66659 4.77998C10.9399 3.91998 11.4999 4.09998 11.4999 4.09998C11.8666 4.99998 11.6333 5.69331 11.5666 5.85998C11.9999 6.33331 12.2533 6.92665 12.2533 7.66665C12.2533 10.2133 10.6933 10.7733 9.20659 10.94C9.44659 11.1466 9.66659 11.5533 9.66659 12.1733C9.66659 13.0666 9.66659 13.7866 9.66659 14C9.66659 14.18 9.77325 14.3933 10.1133 14.3333C12.7599 13.44 14.6666 10.9466 14.6666 7.99998C14.6666 7.1245 14.4941 6.25759 14.1591 5.44876C13.8241 4.63992 13.333 3.90499 12.714 3.28593C12.0949 2.66688 11.36 2.17581 10.5511 1.84078C9.7423 1.50575 8.8754 1.33331 7.99992 1.33331V1.33331Z"
+              fill="currentcolor"
+            ></path>
+          </svg>
+          <span>View on Github</span>
+        </button>
+      </div>
     </main>
     <script>
-        const toggleBtn = document.querySelector('.toggle_btn');
-        const toggleBtnIcon = document.querySelector('.toggle_btn i');
-        const dropDownMenu = document.querySelector('.dropdown_menu');
-        
-        toggleBtn.onclick = function () {
-            dropDownMenu.classList.toggle('open')
-            const isOpen = dropDownMenu.classList.contains('open')
+      const toggleBtn = document.querySelector(".toggle_btn");
+      const toggleBtnIcon = document.querySelector(".toggle_btn i");
+      const dropDownMenu = document.querySelector(".dropdown_menu");
 
-            toggleBtnIcon.classList = isOpen
-            ? 'fa-solid fa-xmark'
-            : 'fa-solid fa-bars'
-        }
+      toggleBtn.onclick = function () {
+        dropDownMenu.classList.toggle("open");
+        const isOpen = dropDownMenu.classList.contains("open");
+
+        toggleBtnIcon.classList = isOpen
+          ? "fa-solid fa-xmark"
+          : "fa-solid fa-bars";
+      };
     </script>
-</body>
+  </body>
 </html>
