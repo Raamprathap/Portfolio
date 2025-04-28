@@ -318,6 +318,7 @@
         align-items: center;
         justify-content: center;
         font-size: 1.5rem;
+        flex-shrink: 0;
       }
 
       .info-details h3 {
@@ -330,6 +331,8 @@
         color: #ccc;
         text-decoration: none;
         transition: color 0.3s ease;
+        word-break: break-word;
+        overflow-wrap: break-word;
       }
 
       .info-details a:hover {
@@ -490,7 +493,7 @@
             </div>
             <div class="info-details">
               <h3>Email</h3>
-              <p>
+              <p class="mail-id">
                 <a href="mailto:raamprathap@example.com"
                   >raamprathap17242@gmail.com</a
                 >
