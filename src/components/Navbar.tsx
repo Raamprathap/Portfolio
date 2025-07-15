@@ -13,13 +13,13 @@ export default function Navbar() {
     <header className="relative px-8 z-10">
       <nav className="flex items-center justify-between h-16 max-w-6xl mx-auto">
         <div className="font-bold text-xl text-gray-800">
-          <NavLink to="/">
+          <NavLink to="/Portfolio">
             Raam Prathap R V
           </NavLink>
         </div>
 
         <ul className="hidden md:flex gap-8 text-gray-800 font-medium">
-          <li><NavLink to="/" className={linkClass}>Home</NavLink></li>
+          <li><NavLink to="/Portfolio" className={linkClass}>Home</NavLink></li>
           <li><NavLink to="/about" className={linkClass}>About</NavLink></li>
           <li><NavLink to="/projects" className={linkClass}>Projects</NavLink></li>
           <li><NavLink to="/resume" className={linkClass}>Resume</NavLink></li>

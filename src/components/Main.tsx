@@ -60,7 +60,7 @@ export default function Main() {
                 <motion.img 
                     src="/assets/avataaars.png" 
                     alt="" 
-                    className="absolute top-25 h-150 z-1 hidden md:block" 
+                    className="absolute top-35 h-50 w-50 rounded-full md:h-150 md:w-[unset] md:rounded-none md:top-25 border-4 border-black md:border-none z-1" 
                     initial={{ opacity: 0, y: 150 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ 
@@ -104,7 +104,7 @@ export default function Main() {
                     </div>
                     
                     <motion.p 
-                        className="z-5 mt-5 text-gray-600 text-md font-bold"
+                        className="z-5 mt-5 text-gray-600 text-md hidden md:block font-bold"
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ 
