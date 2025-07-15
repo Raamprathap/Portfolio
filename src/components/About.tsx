@@ -14,88 +14,197 @@ import {
   SiFlask,
   SiMongodb,
   SiFirebase,
+  SiMysql,
   SiTensorflow,
   SiKeras,
+  SiPytorch,
+  SiScikitlearn,
+  SiOpencv,
   SiGit,
+  SiGithub,
+  SiGooglecloud,
+  SiEclipseide,
+  SiAndroidstudio,
+  SiRaspberrypi,
+  SiArduino,
+  SiFigma,
+  SiC,
+  SiCplusplus,
+  SiHaskell,
   SiSocketdotio,
 } from "react-icons/si";
-import { FaFileAlt } from "react-icons/fa";
+import { DiJava, DiVisualstudio } from "react-icons/di";
+import { AiOutlineBarChart } from "react-icons/ai";
+import { FaFileExcel } from "react-icons/fa";
+
+import {
+  FaFileAlt,
+  FaMicrochip,
+  FaRobot,
+  FaSearch,
+  FaSearchPlus,
+  FaGlobe,
+  FaLanguage,
+} from "react-icons/fa";
 
 export default function About() {
     const experience = [
-        {
-            title: "Skills",
-            content: (
-                <div>
-                    <Tabs defaultValue="Frontend" className="w-full">
-                        <TabsList className="flex-row md:flex-col w-full flex-wrap p-2 my-2 z-10">
-                            <TabsTrigger value="Frontend">Frontend</TabsTrigger>
-                            <TabsTrigger value="Backend">Backend</TabsTrigger>
-                            <TabsTrigger value="Database">Database</TabsTrigger>
-                            <TabsTrigger value="Machine-Learning">Machine-Learning</TabsTrigger>
-                            <TabsTrigger value="Tools">Tools</TabsTrigger>
-                        </TabsList>
-                        <TabsContent value="Frontend">
-                            <div className="flex flex-row mb-10 w-full mt-25 md:mt-15">
-                                <AnimatedTooltip
-                                    items={[
-                                    { id: 1,  name: "HTML5",        icon: SiHtml5 },
-                                    { id: 2,  name: "CSS3",         icon: SiCss3 },
-                                    { id: 3,  name: "JavaScript",   icon: SiJavascript },
-                                    { id: 4,  name: "React",        icon: SiReact },
-                                    { id: 5,  name: "Tailwind CSS", icon: SiTailwindcss },
-                                    { id: 6,  name: "Vite",         icon: SiVite },
-                                    ]}
-                                />
-                            </div>
-                        </TabsContent>
-                        <TabsContent value="Backend">
-                            <div className="flex flex-row mb-10 w-full mt-25 md:mt-15">
-                                <AnimatedTooltip
-                                    items={[
-                                    { id: 7,  name: "Node.js",   icon: SiNodedotjs },
-                                    { id: 8,  name: "Express.js",icon: SiExpress },
-                                    { id: 9,  name: "Python",    icon: SiPython },
-                                    { id: 10, name: "Flask",     icon: SiFlask },
-                                    ]}
-                                />
-                            </div>
-                        </TabsContent>
-                        <TabsContent value="Database">
-                            <div className="flex flex-row mb-10 w-full mt-25 md:mt-15">
-                                <AnimatedTooltip
-                                    items={[
-                                    { id: 11, name: "MongoDB",  icon: SiMongodb },
-                                    { id: 12, name: "Firebase", icon: SiFirebase },
-                                    ]}
-                                />
-                            </div>
-                        </TabsContent>
-                        <TabsContent value="Machine-Learning">
-                            <div className="flex flex-row mb-10 w-full mt-25 md:mt-15">
-                                <AnimatedTooltip
-                                    items={[
-                                    { id: 13, name: "TensorFlow", icon: SiTensorflow },
-                                    { id: 14, name: "Keras",      icon: SiKeras },
-                                    ]}
-                                />
-                            </div>
-                        </TabsContent>
-                        <TabsContent value="Tools">
-                            <div className="flex flex-row mb-10 w-full mt-25 md:mt-15">
-                                <AnimatedTooltip
-                                    items={[
-                                    { id: 15, name: "Git",        icon: SiGit },
-                                    { id: 16, name: "Socket.IO",  icon: SiSocketdotio },
-                                    { id: 17, name: "Files",      icon: FaFileAlt },
-                                    ]}
-                                />
-                            </div>
-                        </TabsContent>
-                    </Tabs>                    
-                </div>
-            ),
-        },
+     {
+  title: "Skills",
+  content: (
+    <div>
+      <Tabs defaultValue="Frontend" className="w-full">
+        <TabsList className="flex-row md:flex-col w-full flex-wrap p-2 my-2 z-10">
+          <TabsTrigger value="Frontend">Frontend</TabsTrigger>
+          <TabsTrigger value="Backend">Backend</TabsTrigger>
+          <TabsTrigger value="Database">Database</TabsTrigger>
+          <TabsTrigger value="Machine-Learning">ML / AI</TabsTrigger>
+          <TabsTrigger value="Programming">Programming</TabsTrigger>
+          <TabsTrigger value="DevTools">DevTools</TabsTrigger>
+          <TabsTrigger value="Embedded">Embedded</TabsTrigger>
+          <TabsTrigger value="Design">Design</TabsTrigger>
+          <TabsTrigger value="Languages">Languages</TabsTrigger>
+          <TabsTrigger value="Other">Other</TabsTrigger>
+        </TabsList>
+
+        {/* ─ Frontend ─ */}
+        <TabsContent value="Frontend">
+          <div className="flex flex-row items-center justify-center mb-10 w-full mt-15 md:mt-25">
+              <AnimatedTooltip items={[
+                { id: 1,  name: "HTML5",        icon: <SiHtml5 /> },
+                { id: 2,  name: "CSS3",         icon: <SiCss3 /> },
+                { id: 3,  name: "JavaScript",   icon: <SiJavascript /> },
+                { id: 4,  name: "React.js",     icon: <SiReact /> },
+                { id: 5,  name: "Tailwind CSS", icon: <SiTailwindcss /> },
+                { id: 6,  name: "Vite",         icon: <SiVite /> },
+                { id: 7,  name: "Bootstrap",    icon: <FaFileAlt /> },
+                { id: 8,  name: "Framer Motion",icon: <FaFileAlt /> },
+              ]}/>
+          </div>
+        </TabsContent>
+
+        {/* ─ Backend ─ */}
+        <TabsContent value="Backend">
+          <div className="flex flex-row items-center justify-center mb-10 w-full mt-15 md:mt-25">
+              <AnimatedTooltip items={[
+                { id: 9,  name: "Node.js",     icon: <SiNodedotjs /> },
+                { id: 10, name: "Express.js",  icon: <SiExpress /> },
+                { id: 11, name: "Python",      icon: <SiPython /> },
+                { id: 12, name: "Flask",       icon: <SiFlask /> },
+                { id: 13, name: "FastAPI",     icon: <FaFileAlt /> },
+                { id: 14, name: "REST APIs",   icon: <FaFileAlt /> },
+                { id: 15, name: "Socket.IO",   icon: <SiSocketdotio /> },
+              ]}/>
+          </div>
+        </TabsContent>
+
+        {/* ─ Database ─ */}
+        <TabsContent value="Database">
+          <div className="flex flex-row items-center justify-center mb-10 w-full mt-15 md:mt-25">
+              <AnimatedTooltip items={[
+                { id: 16, name: "MongoDB",  icon: <SiMongodb /> },
+                { id: 17, name: "Firebase", icon: <SiFirebase /> },
+                { id: 18, name: "MySQL",    icon: <SiMysql /> },
+                { id: 19, name: "SQL",      icon: <SiMysql /> },
+              ]}/>
+          </div>
+        </TabsContent>
+
+        {/* ─ ML / AI ─ */}
+        <TabsContent value="Machine-Learning">
+          <div className="flex flex-row items-center justify-center mb-10 w-full mt-15 md:mt-25">
+              <AnimatedTooltip items={[
+                { id: 20, name: "TensorFlow",  icon: <SiTensorflow /> },
+                { id: 21, name: "Keras",       icon: <SiKeras /> },
+                { id: 22, name: "PyTorch",     icon: <SiPytorch /> },
+                { id: 23, name: "Scikit‑learn",icon: <SiScikitlearn /> },
+                { id: 24, name: "OpenCV",      icon: <SiOpencv /> },
+                { id: 25, name: "GANs",        icon: <FaRobot /> },
+                { id: 26, name: "Transformers",icon: <FaRobot /> },
+                { id: 27, name: "RAG",         icon: <FaSearch /> },
+                { id: 28, name: "DeepSeek",    icon: <FaSearchPlus /> },
+              ]}/>
+          </div>
+        </TabsContent>
+
+        {/* ─ Programming ─ */}
+        <TabsContent value="Programming">
+          <div className="flex flex-row items-center justify-center mb-10 w-full mt-15 md:mt-25">
+              <AnimatedTooltip items={[
+                { id: 29, name: "C",          icon: <SiC /> },
+                { id: 30, name: "C++",        icon: <SiCplusplus /> },
+                { id: 31, name: "Python",     icon: <SiPython /> },
+                { id: 32, name: "Java",       icon: <DiJava /> },
+                { id: 33, name: "JavaScript", icon: <SiJavascript /> },
+                { id: 34, name: "Haskell",    icon: <SiHaskell /> },
+                { id: 35, name: "SQL",        icon: <SiMysql /> },
+              ]}/>
+          </div>
+        </TabsContent>
+
+        {/* ─ DevTools ─ */}
+        <TabsContent value="DevTools">
+          <div className="flex flex-row items-center justify-center mb-10 w-full mt-15 md:mt-25">
+              <AnimatedTooltip items={[
+                { id: 36, name: "VS Code",        icon: <DiVisualstudio /> },
+                { id: 37, name: "Git",            icon: <SiGit /> },
+                { id: 38, name: "GitHub",         icon: <SiGithub /> },
+                { id: 39, name: "Google Cloud",   icon: <SiGooglecloud /> },
+                { id: 40, name: "Eclipse",        icon: <SiEclipseide /> },
+                { id: 41, name: "Android Studio", icon: <SiAndroidstudio /> },
+                { id: 42, name: "Postman",        icon: <FaFileAlt /> },
+              ]}/>
+          </div>
+        </TabsContent>
+
+        {/* ─ Embedded ─ */}
+        <TabsContent value="Embedded">
+          <div className="flex flex-row items-center justify-center mb-10 w-full mt-15 md:mt-25">
+              <AnimatedTooltip items={[
+                { id: 43, name: "Raspberry Pi", icon: <SiRaspberrypi /> },
+                { id: 44, name: "ESP32",        icon: <FaMicrochip /> },
+                { id: 45, name: "Arduino",      icon: <SiArduino /> },
+              ]}/>
+          </div>
+        </TabsContent>
+
+        {/* ─ Design / Analytics ─ */}
+        <TabsContent value="Design">
+          <div className="flex flex-row items-center justify-center mb-10 w-full mt-15 md:mt-25">
+              <AnimatedTooltip items={[
+                { id: 46, name: "Figma",     icon: <SiFigma /> },
+                { id: 47, name: "Power BI",  icon: <AiOutlineBarChart /> },
+                { id: 48, name: "Excel",     icon: <FaFileExcel /> },
+              ]}/>
+          </div>
+        </TabsContent>
+
+        {/* ─ Spoken Languages ─ */}
+        <TabsContent value="Languages">
+          <div className="flex flex-row items-center justify-center mb-10 w-full mt-15 md:mt-25">
+              <AnimatedTooltip items={[
+                { id: 49, name: "English",  icon: <FaGlobe /> },
+                { id: 50, name: "Tamil",    icon: <FaLanguage /> },
+                { id: 51, name: "Hindi",    icon: <FaLanguage /> },
+                { id: 52, name: "Japanese", icon: <FaLanguage /> },
+              ]}/>
+          </div>
+        </TabsContent>
+
+        {/* ─ Other ─ */}
+        <TabsContent value="Other">
+          <div className="flex flex-row items-center justify-center mb-10 w-full mt-15 md:mt-25">
+              <AnimatedTooltip items={[
+                { id: 53, name: "CI / CD", icon: <FaFileAlt /> },
+                { id: 54, name: "Linux",   icon: <FaFileAlt /> },
+                { id: 55, name: "Windows", icon: <FaFileAlt /> },
+              ]}/>
+          </div>
+        </TabsContent>
+      </Tabs>
+    </div>
+  ),
+},
         {
             title: "Late 2024",
             content: (
