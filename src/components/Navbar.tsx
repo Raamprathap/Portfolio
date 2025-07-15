@@ -4,7 +4,7 @@ import { useState } from "react";
 export default function Navbar() {
   const [open, setOpen] = useState(false);
 
-  const linkClass = ({ isActive }) =>
+  const linkClass = ({ isActive }: { isActive: boolean }) =>
     isActive
       ? "relative px-6 py-2 bg-yellow-100 rounded-full transition-all duration-300"
       : "relative nav-hover transition-all duration-300";
