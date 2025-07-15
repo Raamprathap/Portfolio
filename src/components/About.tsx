@@ -69,7 +69,7 @@ export default function About() {
 
         {/* ─ Frontend ─ */}
         <TabsContent value="Frontend">
-          <div className="flex flex-row items-center justify-center mb-10 w-full mt-15 md:mt-25">
+          <div className="flex flex-row flex-wrap items-center justify-center mb-10 w-full mt-30 md:mt-15">
               <AnimatedTooltip items={[
                 { id: 1,  name: "HTML5",        icon: <SiHtml5 /> },
                 { id: 2,  name: "CSS3",         icon: <SiCss3 /> },
@@ -85,7 +85,7 @@ export default function About() {
 
         {/* ─ Backend ─ */}
         <TabsContent value="Backend">
-          <div className="flex flex-row items-center justify-center mb-10 w-full mt-15 md:mt-25">
+          <div className="flex flex-row flex-wrap items-center justify-center mb-10 w-full mt-30 md:mt-15">
               <AnimatedTooltip items={[
                 { id: 9,  name: "Node.js",     icon: <SiNodedotjs /> },
                 { id: 10, name: "Express.js",  icon: <SiExpress /> },
@@ -100,7 +100,7 @@ export default function About() {
 
         {/* ─ Database ─ */}
         <TabsContent value="Database">
-          <div className="flex flex-row items-center justify-center mb-10 w-full mt-15 md:mt-25">
+          <div className="flex flex-row flex-wrap items-center justify-center mb-10 w-full mt-30 md:mt-15">
               <AnimatedTooltip items={[
                 { id: 16, name: "MongoDB",  icon: <SiMongodb /> },
                 { id: 17, name: "Firebase", icon: <SiFirebase /> },
@@ -112,7 +112,7 @@ export default function About() {
 
         {/* ─ ML / AI ─ */}
         <TabsContent value="Machine-Learning">
-          <div className="flex flex-row items-center justify-center mb-10 w-full mt-15 md:mt-25">
+          <div className="flex flex-row flex-wrap items-center justify-center mb-10 w-full mt-30 md:mt-15">
               <AnimatedTooltip items={[
                 { id: 20, name: "TensorFlow",  icon: <SiTensorflow /> },
                 { id: 21, name: "Keras",       icon: <SiKeras /> },
@@ -129,7 +129,7 @@ export default function About() {
 
         {/* ─ Programming ─ */}
         <TabsContent value="Programming">
-          <div className="flex flex-row items-center justify-center mb-10 w-full mt-15 md:mt-25">
+          <div className="flex flex-row flex-wrap items-center justify-center mb-10 w-full mt-30 md:mt-15">
               <AnimatedTooltip items={[
                 { id: 29, name: "C",          icon: <SiC /> },
                 { id: 30, name: "C++",        icon: <SiCplusplus /> },
@@ -144,7 +144,7 @@ export default function About() {
 
         {/* ─ DevTools ─ */}
         <TabsContent value="DevTools">
-          <div className="flex flex-row items-center justify-center mb-10 w-full mt-15 md:mt-25">
+          <div className="flex flex-row flex-wrap items-center justify-center mb-10 w-full mt-30 md:mt-15">
               <AnimatedTooltip items={[
                 { id: 36, name: "VS Code",        icon: <DiVisualstudio /> },
                 { id: 37, name: "Git",            icon: <SiGit /> },
@@ -159,7 +159,7 @@ export default function About() {
 
         {/* ─ Embedded ─ */}
         <TabsContent value="Embedded">
-          <div className="flex flex-row items-center justify-center mb-10 w-full mt-15 md:mt-25">
+          <div className="flex flex-row flex-wrap items-center justify-center mb-10 w-full mt-30 md:mt-15">
               <AnimatedTooltip items={[
                 { id: 43, name: "Raspberry Pi", icon: <SiRaspberrypi /> },
                 { id: 44, name: "ESP32",        icon: <FaMicrochip /> },
@@ -170,7 +170,7 @@ export default function About() {
 
         {/* ─ Design / Analytics ─ */}
         <TabsContent value="Design">
-          <div className="flex flex-row items-center justify-center mb-10 w-full mt-15 md:mt-25">
+          <div className="flex flex-row flex-wrap items-center justify-center mb-10 w-full mt-30 md:mt-15">
               <AnimatedTooltip items={[
                 { id: 46, name: "Figma",     icon: <SiFigma /> },
                 { id: 47, name: "Power BI",  icon: <AiOutlineBarChart /> },
@@ -181,7 +181,7 @@ export default function About() {
 
         {/* ─ Spoken Languages ─ */}
         <TabsContent value="Languages">
-          <div className="flex flex-row items-center justify-center mb-10 w-full mt-15 md:mt-25">
+          <div className="flex flex-row flex-wrap items-center justify-center mb-10 w-full mt-30 md:mt-15">
               <AnimatedTooltip items={[
                 { id: 49, name: "English",  icon: <FaGlobe /> },
                 { id: 50, name: "Tamil",    icon: <FaLanguage /> },
@@ -193,7 +193,7 @@ export default function About() {
 
         {/* ─ Other ─ */}
         <TabsContent value="Other">
-          <div className="flex flex-row items-center justify-center mb-10 w-full mt-15 md:mt-25">
+          <div className="flex flex-row flex-wrap items-center justify-center mb-10 w-full mt-30 md:mt-15">
               <AnimatedTooltip items={[
                 { id: 53, name: "CI / CD", icon: <FaFileAlt /> },
                 { id: 54, name: "Linux",   icon: <FaFileAlt /> },
