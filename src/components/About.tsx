@@ -27,8 +27,8 @@ export default function About() {
             title: "Skills",
             content: (
                 <div>
-                    <Tabs defaultValue="Frontend" className="w-[400px]">
-                        <TabsList>
+                    <Tabs defaultValue="Frontend" className="w-full">
+                        <TabsList className="flex-row md:flex-col w-full flex-wrap p-2 my-2 z-10">
                             <TabsTrigger value="Frontend">Frontend</TabsTrigger>
                             <TabsTrigger value="Backend">Backend</TabsTrigger>
                             <TabsTrigger value="Database">Database</TabsTrigger>
@@ -36,7 +36,7 @@ export default function About() {
                             <TabsTrigger value="Tools">Tools</TabsTrigger>
                         </TabsList>
                         <TabsContent value="Frontend">
-                            <div className="flex flex-row mb-10 w-full mt-15">
+                            <div className="flex flex-row mb-10 w-full mt-25 md:mt-15">
                                 <AnimatedTooltip
                                     items={[
                                     { id: 1,  name: "HTML5",        icon: SiHtml5 },
@@ -50,7 +50,7 @@ export default function About() {
                             </div>
                         </TabsContent>
                         <TabsContent value="Backend">
-                            <div className="flex flex-row mb-10 w-full mt-15">
+                            <div className="flex flex-row mb-10 w-full mt-25 md:mt-15">
                                 <AnimatedTooltip
                                     items={[
                                     { id: 7,  name: "Node.js",   icon: SiNodedotjs },
@@ -62,7 +62,7 @@ export default function About() {
                             </div>
                         </TabsContent>
                         <TabsContent value="Database">
-                            <div className="flex flex-row mb-10 w-full mt-15">
+                            <div className="flex flex-row mb-10 w-full mt-25 md:mt-15">
                                 <AnimatedTooltip
                                     items={[
                                     { id: 11, name: "MongoDB",  icon: SiMongodb },
@@ -72,7 +72,7 @@ export default function About() {
                             </div>
                         </TabsContent>
                         <TabsContent value="Machine-Learning">
-                            <div className="flex flex-row mb-10 w-full mt-15">
+                            <div className="flex flex-row mb-10 w-full mt-25 md:mt-15">
                                 <AnimatedTooltip
                                     items={[
                                     { id: 13, name: "TensorFlow", icon: SiTensorflow },
@@ -82,7 +82,7 @@ export default function About() {
                             </div>
                         </TabsContent>
                         <TabsContent value="Tools">
-                            <div className="flex flex-row mb-10 w-full mt-15">
+                            <div className="flex flex-row mb-10 w-full mt-25 md:mt-15">
                                 <AnimatedTooltip
                                     items={[
                                     { id: 15, name: "Git",        icon: SiGit },
@@ -100,7 +100,7 @@ export default function About() {
             title: "Late 2024",
             content: (
                 <div>
-                    <div className="mb-8 space-y-4 text-sm md:text-lg text-neutral-800 leading-relaxed">
+                    <div className="mb-8 space-y-4 text-sm md:text-lg text-neutral-800 leading-loose md:leading-relaxed">
                         <p>
                             I began my internship at 
                             <strong className="mx-1 px-2 py-1 bg-yellow-500/80 text-white rounded-md shadow-sm">
@@ -158,7 +158,7 @@ export default function About() {
             title: "Mid 2025",
             content: (
                 <div>
-                    <div className="mb-8 space-y-4 text-sm md:text-lg text-neutral-800 leading-relaxed">
+                    <div className="mb-8 space-y-4 text-sm md:text-lg text-neutral-800 leading-loose md:leading-relaxed">
                         <p>
                             I'm currently a&nbsp;
                             <strong className="inline-block px-2 py-1 rounded-md bg-amber-500/90 text-white shadow-sm">
