@@ -1,40 +1,36 @@
 import { motion } from "framer-motion";
 import { BackgroundBeams } from "./ui/background-beams";
 import { FloatingDock } from "./ui/floating-dock";
-import {
-  IconBrandGithub,
-  IconBrandInstagram,
-  IconBrandLinkedin,
-  IconMail
-} from "@tabler/icons-react";
+import { Github, Instagram, Linkedin, Mail } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 
 export default function Main() {
     const links = [ 
     {
       title: "LinkedIn",
       icon: (
-        <IconBrandLinkedin className="h-full w-full text-yellow-500 " />//dark:text-neutral-300
+        <Linkedin className="h-full w-full text-yellow-500 " />//dark:text-neutral-300
       ),
       href: "https://www.linkedin.com/in/raamprathap-rajarathinam/",
     },
     {
       title: "GitHub",
       icon: (
-        <IconBrandGithub className="h-full w-full text-yellow-500 " />//dark:text-neutral-300
+        <Github className="h-full w-full text-yellow-500 " />//dark:text-neutral-300
       ),
       href: "https://github.com/Raamprathap",
     },
     {
       title: "Instagram",
       icon: (
-        <IconBrandInstagram className="h-full w-full text-yellow-500 " />//dark:text-neutral-300
+        <Instagram className="h-full w-full text-yellow-500 " />//dark:text-neutral-300
       ),
       href: "//https://www.instagram.com/_.raam._17",
     },
     {
       title: "Email",
       icon: (
-        <IconMail className="h-full w-full text-yellow-500"/> //dark:text-neutral-300
+        <Mail className="h-full w-full text-yellow-500"/> //dark:text-neutral-300
       ),
       href: "mailto:raamprathap17242@gmail.com"
     }
@@ -42,6 +38,13 @@ export default function Main() {
 
     return (
         <>
+            <Helmet>
+                <title>Raam Prathap | Full Stack Developer Portfolio</title>
+                <meta name="description" content="Portfolio of Raam Prathap, a passionate full-stack developer skilled in React, Node.js, and AI/ML integration." />
+                <meta name="keywords" content="Raam Prathap, full stack developer, React developer, Node.js developer, AI engineer, web developer portfolio" />
+                <meta name="author" content="Raam Prathap" />
+                <link rel="canonical" href="https://raam-prathap.vercel.app/" />
+            </Helmet>
             <main className="flex flex-col items-center justify-center z-10">
                 <motion.h1 
                     className="text-gray-600 text-4xl md:text-9xl z-7 kaushan-script-regular"

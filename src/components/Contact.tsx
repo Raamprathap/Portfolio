@@ -3,12 +3,7 @@ import { Input } from "./ui/input";
 import { cn } from "../lib/utils";
 import React, {useRef, useState} from "react";
 import { FloatingDock } from "./ui/floating-dock";
-import {
-  IconBrandGithub,
-  IconBrandInstagram,
-  IconBrandLinkedin,
-  IconMail
-} from "@tabler/icons-react";
+import { Github, Instagram, Linkedin, Mail } from "lucide-react";
 import emailjs from "@emailjs/browser";
 
 export default function Contact() {
@@ -44,28 +39,28 @@ export default function Contact() {
     {
       title: "LinkedIn",
       icon: (
-        <IconBrandLinkedin className="h-full w-full text-yellow-500 " />//dark:text-neutral-300
+        <Linkedin className="h-full w-full text-yellow-500 " />//dark:text-neutral-300
       ),
       href: "https://www.linkedin.com/in/raamprathap-rajarathinam/",
     },
     {
       title: "GitHub",
       icon: (
-        <IconBrandGithub className="h-full w-full text-yellow-500 " />//dark:text-neutral-300
+        <Github className="h-full w-full text-yellow-500 " />//dark:text-neutral-300
       ),
       href: "https://github.com/Raamprathap",
     },
     {
       title: "Instagram",
       icon: (
-        <IconBrandInstagram className="h-full w-full text-yellow-500 " />//dark:text-neutral-300
+        <Instagram className="h-full w-full text-yellow-500 " />//dark:text-neutral-300
       ),
       href: "//https://www.instagram.com/_.raam._17",
     },
     {
       title: "Email",
       icon: (
-        <IconMail className="h-full w-full text-yellow-500"/> //dark:text-neutral-300
+        <Mail className="h-full w-full text-yellow-500"/> //dark:text-neutral-300
       ),
       href: "mailto:raamprathap17242@gmail.com"
     }

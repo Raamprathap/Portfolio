@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://raam-prathap.vercel.app/sitemap.xml
