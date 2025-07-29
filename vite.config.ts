@@ -11,12 +11,13 @@ export default defineConfig({
     createHtmlPlugin({
       inject: {
         data: {
-          title: 'Raam Prathap | Full Stack Developer',
-          description: 'Portfolio of Raam Prathap showcasing full stack, ML, and research work.',
-          keywords: 'Raam Prathap, Full Stack Developer, ML Developer, Portfolio, React Developer, NodeJS',
-          author: 'Raam Prathap Rajarathinam',
-        },
-      },
-    }),
+          title: 'Raam Prathap | Full Stack Developer Portfolio',
+          description: 'Portfolio of Raam Prathap, a passionate full-stack developer skilled in React, Node.js, and AI/ML integration.',
+          keywords: 'Raam Prathap, full stack developer, React developer, Node.js developer, AI engineer, web developer portfolio',
+          author: 'Raam Prathap',
+          canonical: 'https://raam-prathap.vercel.app/',
+        }
+      }
+    })
   ]
 })
