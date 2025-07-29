@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import { BackgroundBeams } from "./ui/background-beams";
 import { FloatingDock } from "./ui/floating-dock";
 import { Github, Instagram, Linkedin, Mail } from "lucide-react";
-import { Helmet } from "react-helmet-async";
 
 export default function Main() {
     const links = [ 
@@ -38,13 +37,6 @@ export default function Main() {
 
     return (
         <>
-            <Helmet>
-                <title>Raam Prathap | Full Stack Developer Portfolio</title>
-                <meta name="description" content="Portfolio of Raam Prathap, a passionate full-stack developer skilled in React, Node.js, and AI/ML integration." />
-                <meta name="keywords" content="Raam Prathap, full stack developer, React developer, Node.js developer, AI engineer, web developer portfolio" />
-                <meta name="author" content="Raam Prathap" />
-                <link rel="canonical" href="https://raam-prathap.vercel.app/" />
-            </Helmet>
             <main className="flex flex-col items-center justify-center z-10">
                 <motion.h1 
                     className="text-gray-600 text-4xl md:text-9xl z-7 kaushan-script-regular"
