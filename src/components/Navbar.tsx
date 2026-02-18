@@ -6,39 +6,53 @@ export default function Navbar() {
 
   const linkClass = ({ isActive }: { isActive: boolean }) =>
     isActive
-      ? "relative px-6 py-2 bg-yellow-100 rounded-full transition-all duration-300"
+      ? "relative px-6 py-2 bg-[var(--bg-card)] rounded-full transition-all duration-300"
       : "relative nav-hover transition-all duration-300";
 
   return (
-    <header className="relative px-8 z-10">
+    <header className="relative px-8 z-50">
       <nav className="flex items-center justify-between h-16 max-w-6xl mx-auto">
-        <div className="font-bold text-xl text-gray-800">
-          <NavLink to="/">
-            Raam Prathap R V
-          </NavLink>
+        <div className="font-bold text-xl text-[var(--text-primary)]">
+          <NavLink to="/">Raam Prathap R V</NavLink>
         </div>
 
-        <ul className="hidden md:flex gap-8 text-gray-800 font-medium">
-          <li><NavLink to="/" className={linkClass}>Home</NavLink></li>
-          <li><NavLink to="/about" className={linkClass}>About</NavLink></li>
-          <li><NavLink to="/projects" className={linkClass}>Projects</NavLink></li>
-          <li><NavLink to="/resume" className={linkClass}>Resume</NavLink></li>
+        <ul className="hidden md:flex gap-8 text-[var(--text-primary)] font-medium">
+          <li>
+            <NavLink to="/" className={linkClass}>
+              Home
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/about" className={linkClass}>
+              About
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/projects" className={linkClass}>
+              Projects
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/resume" className={linkClass}>
+              Resume
+            </NavLink>
+          </li>
         </ul>
 
         <NavLink
           to="/contact"
           className={({ isActive }) =>
             (isActive
-              ? "bg-black text-gray-100"
-              : "bg-transparent text-gray-800 hover:bg-black hover:text-gray-100") +
-            " hidden md:flex px-6 py-2 rounded-full font-bold border-2 border-black transition duration-500"
+              ? "bg-[var(--button-primary-bg)] text-[var(--text-primary)]"
+              : "bg-transparent text-[var(--text-primary)] hover:bg-[var(--button-primary-bg)] hover:text-[var(--text-primary)]") +
+            " hidden md:flex px-6 py-2 rounded-full font-bold border-2 border-[var(--border-primary)] transition duration-500"
           }
         >
           Contact Me
         </NavLink>
 
         <button
-          className="md:hidden text-gray-800 text-2xl"
+          className="md:hidden text-[var(--text-primary)] text-2xl"
           onClick={() => setOpen(!open)}
         >
           <i className="fa-solid fa-bars" />
@@ -46,7 +60,7 @@ export default function Navbar() {
       </nav>
 
       {open && (
-        <ul className="absolute right-8 top-16 bg-white/10 backdrop-blur-lg rounded-lg shadow-lg w-64 flex flex-col z-50 animate-fade-in">
+        <ul className="absolute right-8 top-16 bg-[var(--bg-card)]/90 backdrop-blur-lg rounded-lg shadow-lg w-64 flex flex-col z-[100] animate-fade-in">
           {[
             { to: "/", label: "Home" },
             { to: "/about", label: "About" },
@@ -59,8 +73,9 @@ export default function Navbar() {
                 to={to}
                 onClick={() => setOpen(false)}
                 className={({ isActive }) =>
-                  (isActive ? "text-yellow-500" : "text-gray-800") +
-                  " block px-6 py-3"
+                  (isActive
+                    ? "text-[var(--accent-blue)]"
+                    : "text-[var(--text-primary)]") + " block px-6 py-3"
                 }
               >
                 {label}

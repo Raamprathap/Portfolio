@@ -106,20 +106,23 @@ export default function Projects() {
 
   return (
     <>
-      {/* Overlay: page-wide blur with centered card */}
-      {updating && (
+      {/* {updating && (
         <div className="fixed inset-0 z-50">
-          <div className="absolute inset-0 backdrop-blur-lg bg-yellow-100/40"></div>
+          <div className="absolute inset-0 backdrop-blur-lg bg-[var(--bg-secondary)]/40"></div>
           <div className="absolute inset-0 flex items-center justify-center px-4">
             <CardContainer className="inter-var w-full max-w-lg">
-              <CardBody className="bg-gradient-to-br from-yellow-50 via-yellow-100 to-yellow-50 relative group/card border border-black/10 rounded-2xl p-8 text-center shadow-xl">
+              <CardBody className="bg-[var(--bg-card)] relative group/card border border-[var(--border-secondary)] rounded-2xl p-8 text-center shadow-xl">
                 <CardItem
                   translateZ="50"
-                  className="text-2xl font-bold text-neutral-700 mb-3"
+                  className="text-2xl font-bold text-[var(--text-primary)] mb-3"
                 >
                   Projects Page Is Being Updated
                 </CardItem>
-                <CardItem as="p" translateZ="40" className="text-neutral-600">
+                <CardItem
+                  as="p"
+                  translateZ="40"
+                  className="text-[var(--text-secondary)]"
+                >
                   I am reconstructing this page with the latest work. Please
                   check back soon, or explore more on GitHub.
                 </CardItem>
@@ -147,11 +150,10 @@ export default function Projects() {
                   </CardItem>
                 </div>
 
-                {/* Optional: a close button to hide overlay */}
                 <div className="mt-4">
                   <button
                     onClick={() => setUpdating(false)}
-                    className="text-sm text-neutral-600 underline hover:text-neutral-800 cursor-pointer"
+                    className="text-sm text-[var(--text-secondary)] underline hover:text-[var(--text-primary)] cursor-pointer"
                   >
                     Still wanna Check it out?
                   </button>
@@ -160,27 +162,29 @@ export default function Projects() {
             </CardContainer>
           </div>
         </div>
-      )}
+      )} */}
 
       <div className="text-center mt-8 mb-4">
-        <h1 className="text-5xl text-gray-800 kaushan-script-regular">
+        <h1 className="text-5xl text-[var(--text-primary)] kaushan-script-regular">
           Projects
         </h1>
       </div>
       <div className="flex flex-wrap md:gap-4 justify-center">
         {projects.map((project, idx) => (
           <CardContainer className="inter-var" key={idx}>
-            <CardBody className="bg-gradient-to-b from-yellow-50 to-yellow-200 relative group/card  border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border">
+            <CardBody className="bg-[var(--bg-card)] relative group/card  border-[var(--border-secondary)] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border">
               {" "}
               {/*dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2]*/}
               <div className="flex justify-between items-center mb-2">
                 <CardItem
                   translateZ="50"
-                  className="text-xl font-bold text-neutral-600" /*dark:text-white*/
+                  className="text-xl font-bold text-[var(--text-primary)]" /*dark:text-white*/
                 >
                   {project.title}
                 </CardItem>
-                <span className="text-sm text-gray-500">{project.year}</span>{" "}
+                <span className="text-sm text-[var(--text-tertiary)]">
+                  {project.year}
+                </span>{" "}
                 {/*dark:text-gray-400*/}
               </div>
               <CardItem translateZ="100" className="w-full mt-2">
@@ -195,7 +199,7 @@ export default function Projects() {
               <CardItem
                 as="p"
                 translateZ="60"
-                className="text-neutral-500 text-sm max-w-sm mt-4" /*dark:text-neutral-300*/
+                className="text-[var(--text-secondary)] text-sm max-w-sm mt-4" /*dark:text-neutral-300*/
               >
                 {project.description}
               </CardItem>
@@ -208,7 +212,7 @@ export default function Projects() {
                   as="a"
                   href={project.liveUrl}
                   target="_blank"
-                  className="px-4 py-2 rounded-xl text-xs text-black font-normal underline" /*dark:text-white*/
+                  className="px-4 py-2 rounded-xl text-xs text-[var(--text-primary)] font-normal underline" /*dark:text-white*/
                 >
                   Live Demo →
                 </CardItem>
@@ -217,7 +221,7 @@ export default function Projects() {
                   as="a"
                   href={project.githubUrl}
                   target="_blank"
-                  className="px-4 py-2 rounded-xl bg-black text-white text-xs font-bold" /*dark:bg-white dark:text-black*/
+                  className="px-4 py-2 rounded-xl bg-[var(--button-primary-bg)] text-white text-xs font-bold" /*dark:bg-white dark:text-black*/
                 >
                   GitHub
                 </CardItem>
