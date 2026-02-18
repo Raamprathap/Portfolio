@@ -16,7 +16,7 @@ import {
   SiTensorflow,
   SiKeras,
 } from "react-icons/si";
-import { useState } from "react";
+// import { useState } from "react";
 
 export default function Projects() {
   const projects = [
@@ -102,7 +102,7 @@ export default function Projects() {
         "A web app that classifies bird species from images using a deep‑learning model. Trained with TensorFlow/Keras and deployed via Flask, it lets users upload an image and returns the predicted species.",
     },
   ];
-  const [updating, setUpdating] = useState(true);
+  // const [updating, setUpdating] = useState(true);
 
   return (
     <>
