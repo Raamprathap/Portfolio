@@ -173,13 +173,13 @@ export default function Home() {
               >
                 <a
                   href="mailto:raamprathap17242@gmail.com"
-                  className="flex-1 min-w-[150px] px-6 py-3 bg-[var(--button-primary-bg)] hover:bg-[var(--button-primary-hover)] text-[var(--text-primary)] font-semibold rounded-xl transition-all duration-300 text-center shadow-lg hover:shadow-blue-500/50"
+                  className="flex-1 min-w-[150px] px-6 py-3 bg-transparent border-2 border-[var(--border-primary)] text-[var(--text-primary)] hover:bg-[var(--button-primary-hover)] hover:text-[var(--button-primary-text-hover)] font-semibold rounded-xl transition-all duration-300 text-center shadow-lg hover:shadow-[var(--button-primary-hover)]"
                 >
                   Get In Touch
                 </a>
                 <a
                   href="#projects"
-                  className="flex-1 min-w-[150px] px-6 py-3 bg-[var(--bg-tertiary)] hover:bg-gray-700 text-[var(--text-primary)] font-semibold rounded-xl transition-all duration-300 text-center border border-[var(--border-primary)]"
+                  className="flex-1 min-w-[150px] px-6 py-3 bg-transparent border-2 border-[var(--border-primary)] text-[var(--text-primary)] hover:bg-[var(--button-primary-hover)] hover:text-[var(--button-primary-text-hover)] font-semibold rounded-xl transition-all duration-300 text-center shadow-lg hover:shadow-[var(--button-primary-hover)]"
                 >
                   View Projects
                 </a>
