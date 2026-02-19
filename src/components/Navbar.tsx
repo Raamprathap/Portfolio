@@ -44,7 +44,7 @@ export default function Navbar() {
           className={({ isActive }) =>
             (isActive
               ? "bg-[var(--button-primary-bg)] text-[var(--text-primary)]"
-              : "bg-transparent text-[var(--text-primary)] hover:bg-[var(--button-primary-bg)] hover:text-[var(--text-primary)]") +
+              : "bg-transparent text-[var(--text-primary)] hover:bg-[var(--button-primary-bg)] hover:text-[var(--button-primary-text-hover)]") +
             " hidden md:flex px-6 py-2 rounded-full font-bold border-2 border-[var(--border-primary)] transition duration-500"
           }
         >

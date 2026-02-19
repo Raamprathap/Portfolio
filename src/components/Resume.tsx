@@ -88,13 +88,13 @@ export default function Resume() {
           <a
             href={PDF_URL}
             download
-            className="flex gap-2 mt-4 px-6 py-3 bg-[var(--button-primary-bg)] text-white rounded-full hover:bg-[var(--accent-blue)] transition-colors duration-300"
+            className="flex gap-2 mt-4 px-6 py-3 bg-transparent border-2 border-[var(--border-primary)] text-[var(--text-primary)] rounded-full hover:bg-[var(--button-primary-hover)] hover:text-[var(--button-primary-text-hover)] transition-colors duration-300"
           >
             <i className="fa-solid fa-download mt-1.5"></i>
             <p>Download Resume</p>
           </a>
           <button
-            className="flex gap-2 mt-4 px-6 py-3 bg-[var(--button-primary-bg)] text-white rounded-full hover:bg-[var(--accent-blue)] transition-colors duration-300 cursor-pointer"
+            className="flex gap-2 mt-4 px-6 py-3 bg-transparent border-2 border-[var(--border-primary)] text-[var(--text-primary)] rounded-full hover:bg-[var(--button-primary-hover)] hover:text-[var(--button-primary-text-hover)] transition-colors duration-300 cursor-pointer"
             onClick={printResume}
           >
             <i className="fa-solid fa-print mt-1.5"></i>
@@ -116,7 +116,7 @@ export default function Resume() {
               <a
                 href={PDF_URL}
                 download
-                className="px-6 py-3 bg-[var(--button-primary-bg)] text-white rounded-full hover:bg-[var(--accent-blue)] transition-colors duration-300"
+                className="px-6 py-3 bg-transparent border-2 border-[var(--border-primary)] text-[var(--text-primary)] rounded-full hover:bg-[var(--button-primary-hover)] hover:text-[var(--button-primary-text-hover)] transition-colors duration-300"
               >
                 Download Resume
               </a>
@@ -135,7 +135,7 @@ export default function Resume() {
             <button
               onClick={() => setCurrentPage((p) => Math.max(1, p - 1))}
               disabled={currentPage === 1}
-              className="px-4 py-2 bg-[var(--button-primary-bg)] text-white rounded-full hover:bg-[var(--accent-blue)] transition-colors duration-300 disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer"
+              className="px-4 py-2 bg-transparent border-2 border-[var(--border-primary)] text-[var(--text-primary)] rounded-full hover:bg-[var(--button-primary-hover)] hover:text-[var(--button-primary-text-hover)] transition-colors duration-300 disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer"
             >
               <i className="fa-solid fa-chevron-left"></i>
             </button>
@@ -145,7 +145,7 @@ export default function Resume() {
             <button
               onClick={() => setCurrentPage((p) => Math.min(totalPages, p + 1))}
               disabled={currentPage === totalPages}
-              className="px-4 py-2 bg-[var(--button-primary-bg)] text-white rounded-full hover:bg-[var(--accent-blue)] transition-colors duration-300 disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer"
+              className="px-4 py-2 bg-transparent border-2 border-[var(--border-primary)] text-[var(--text-primary)] rounded-full hover:bg-[var(--button-primary-hover)] hover:text-[var(--button-primary-text-hover)] transition-colors duration-300 disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer"
             >
               <i className="fa-solid fa-chevron-right"></i>
             </button>

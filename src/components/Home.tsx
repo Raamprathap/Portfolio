@@ -62,28 +62,17 @@ export default function Home() {
         >
           <div className="relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-xl rounded-3xl overflow-hidden border border-gray-700/50 shadow-2xl shadow-white/10">
             <motion.div
-              className="relative h-48 md:h-64 bg-gradient-to-r from-gray-900 to-black overflow-hidden"
+              className="relative h-48 md:h-64 overflow-hidden"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 1 }}
             >
-              <motion.div
-                className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent"
-                animate={{
-                  x: ["-100%", "100%"],
-                }}
-                transition={{
-                  duration: 3,
-                  repeat: Infinity,
-                  ease: "linear",
-                }}
+              <img
+                src="/assets/banner.jpg"
+                alt="Banner"
+                className="absolute inset-0 w-full h-full object-cover object-center"
+                style={{ zIndex: 0 }}
               />
-
-              <div className="absolute inset-0 opacity-30">
-                <div className="absolute top-10 left-10 w-32 h-32 bg-white/20 rounded-full blur-3xl"></div>
-                <div className="absolute bottom-10 right-10 w-40 h-40 bg-blue-300/20 rounded-full blur-3xl"></div>
-                <div className="absolute top-20 right-20 w-24 h-24 bg-purple-300/20 rounded-full blur-2xl"></div>
-              </div>
             </motion.div>
 
             <div className="relative px-6 md:px-12 pb-8">

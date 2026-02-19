@@ -56,6 +56,7 @@
   /* Border Colors */
   --border-primary: rgba(107, 114, 128, 0.5);
   --border-secondary: rgba(107, 114, 128, 0.3);
+  --button-border: #ffffff;
 
   /* Gradient Backgrounds */
   --gradient-dark: linear-gradient(to bottom right, #1f2937, #0a0a0a);
@@ -73,8 +74,9 @@
   --dock-bg: #1f2937;
   --dock-icon: #9ca3af;
   --input-bg: #1f2937;
-  --button-primary-bg: #3b82f6;
-  --button-primary-hover: #2563eb;
+  --button-primary-bg: #ffffff;
+  --button-primary-hover: #ffffff;
+  --button-primary-text-hover: #000000;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
