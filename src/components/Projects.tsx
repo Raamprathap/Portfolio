@@ -1,105 +1,297 @@
 import { CardBody, CardContainer, CardItem } from "./ui/3d-card";
 import { AnimatedTooltip } from "./ui/animated-tooltip";
 import {
-  SiReact,
-  SiVite,
-  SiTailwindcss,
+  SiNextdotjs,
   SiNodedotjs,
-  SiExpress,
   SiFirebase,
-  SiHtml5,
-  SiCss3,
-  SiJavascript,
-  SiSocketdotio,
+  SiGooglecloud,
+  SiDocker,
+  SiVite,
+  SiTypescript,
+  SiTailwindcss,
+  SiReact,
+  SiExpress,
+  SiMongodb,
   SiPython,
-  SiFlask,
+  SiStreamlit,
+  SiOpencv,
   SiTensorflow,
   SiKeras,
+  SiJavascript,
+  SiVercel,
+  SiHtml5,
+  SiCss3,
+  SiFlask,
 } from "react-icons/si";
+
+import { TbVector, TbMath } from "react-icons/tb";
+import { FaBrain } from "react-icons/fa";
+import { GiArtificialIntelligence } from "react-icons/gi";
 // import { useState } from "react";
 
 export default function Projects() {
   const projects = [
     {
-      title: "Sociogram‑v2",
+      title: "Growgle – AI Geopolitical Career Intelligence Platform",
       year: 2025,
-      image: "assets/proj1.jpg",
-      liveUrl: "https://sociogram-v2.onrender.com/",
-      githubUrl: "https://github.com/Raamprathap/Sociogram-v2",
+      image: "/projects/growgle.png",
+      liveUrl: "https://growgle.vercel.app/",
+      githubUrl: "https://github.com/Growgle",
       tech: [
-        { id: 1, name: "React", icon: <SiReact /> },
-        { id: 2, name: "Vite", icon: <SiVite /> },
-        { id: 3, name: "Tailwind", icon: <SiTailwindcss /> },
-        { id: 4, name: "Node.js", icon: <SiNodedotjs /> },
-        { id: 5, name: "Express.js", icon: <SiExpress /> },
+        { id: 1, name: "Next.js", icon: <SiNextdotjs /> },
+        { id: 2, name: "Node.js", icon: <SiNodedotjs /> },
+        { id: 3, name: "Firebase", icon: <SiFirebase /> },
+        { id: 4, name: "GCP", icon: <SiGooglecloud /> },
+        { id: 5, name: "Docker", icon: <SiDocker /> },
+        { id: 6, name: "Generative AI", icon: <GiArtificialIntelligence /> },
+        { id: 7, name: "Playwright", icon: <TbVector /> },
       ],
       description:
-        "Sociogram v2 is a modern chat application that allows users to send text messages and images to registered users via email authentication. Built with React, Node.js, and MongoDB, it offers real‑time messaging, secure authentication, and cloud‑based image storage for a seamless communication experience.",
+        "A distributed AI-driven career intelligence ecosystem integrating embeddings, live news ingestion, sentiment analysis, and browser automation agents to deliver geopolitical career insights.",
+    },
+
+    {
+      title: "Soil2Sale",
+      year: 2026,
+      image: "/projects/soil2sale.png",
+      liveUrl: "https://se-frontend-sage.vercel.app/",
+      githubUrl: "https://github.com/Soil2Sale",
+      tech: [
+        { id: 1, name: "TypeScript", icon: <SiTypescript /> },
+        { id: 2, name: "React", icon: <SiReact /> },
+        { id: 3, name: "Node.js", icon: <SiNodedotjs /> },
+        { id: 4, name: "Express.js", icon: <SiExpress /> },
+        { id: 5, name: "MongoDB", icon: <SiMongodb /> },
+      ],
+      description:
+        "A scalable full-stack agricultural marketplace connecting farmers and buyers through real-time dashboards, transaction workflows, and backend-driven listing management.",
+    },
+
+    {
+      title: "Post-Accident Alert System (Startup Idea)",
+      year: 2024,
+      image: "/projects/paas.png",
+      liveUrl: "https://paas-sos.vercel.app/",
+      githubUrl:
+        "https://github.com/Raamprathap/Post-Accident-Alert-System-Backend",
+      tech: [
+        { id: 1, name: "Node.js", icon: <SiNodedotjs /> },
+        { id: 2, name: "Express.js", icon: <SiExpress /> },
+        { id: 3, name: "WebSockets", icon: <TbVector /> },
+        { id: 4, name: "React", icon: <SiReact /> },
+      ],
+      description:
+        "A startup-oriented real-time accident detection and emergency broadcast system leveraging WebSockets and REST APIs to notify nearby hospitals instantly.",
+    },
+
+    {
+      title: "MedConnect",
+      year: 2026,
+      image: "/projects/medconnect.png",
+      liveUrl: "https://medconnectlive.vercel.app/",
+      githubUrl: "https://github.com/Syntax-Errors-Medconnect",
+      tech: [
+        { id: 1, name: "React", icon: <SiReact /> },
+        { id: 2, name: "TypeScript", icon: <SiTypescript /> },
+        { id: 3, name: "Node.js", icon: <SiNodedotjs /> },
+        { id: 4, name: "Express.js", icon: <SiExpress /> },
+      ],
+      description:
+        "A healthcare coordination platform enabling patient-doctor communication, documentation workflows, and appointment management via secure full-stack architecture.",
     },
     {
-      title: "Sociogram‑v1",
+      title: "Lab Components Tracker",
       year: 2025,
-      image: "assets/proj2.jpg",
+      image: "/projects/labcomponents.png",
+      liveUrl: "https://amuda-lab.vercel.app/",
+      githubUrl: "https://github.com/knightempire",
+      tech: [
+        { id: 1, name: "React", icon: <SiReact /> },
+        { id: 2, name: "Node.js", icon: <SiNodedotjs /> },
+        { id: 3, name: "JavaScript", icon: <SiJavascript /> },
+      ],
+      description:
+        "A laboratory inventory management system designed to track electronic components and optimize internal asset management workflows.",
+    },
+    {
+      title: "Sociogram v1",
+      year: 2025,
+      image: "",
       liveUrl: "https://sociogram-v1.onrender.com/",
       githubUrl: "https://github.com/Raamprathap/Sociogram-v1",
       tech: [
         { id: 1, name: "React", icon: <SiReact /> },
         { id: 2, name: "Firebase", icon: <SiFirebase /> },
+        { id: 3, name: "JavaScript", icon: <SiJavascript /> },
       ],
       description:
-        "Sociogram is a social‑media style chat platform with secure sign‑in and real‑time messaging. Built with React and Firebase for auth and data, it offers a smooth interface and responsive performance.",
+        "The first version of Sociogram, a real-time social media chat platform built with React and Firebase. Implemented authentication, Firestore-based live messaging, and user-based message synchronization.",
     },
+
     {
-      title: "PAAS",
-      year: 2024,
-      image: "assets/proj3.jpg",
-      liveUrl: "https://post-accident-alert-system.onrender.com",
-      githubUrl:
-        "https://github.com/Raamprathap/Post-Accident-Alert-System-Frontend",
+      title: "Sociogram v2",
+      year: 2025,
+      image: "",
+      liveUrl: "https://sociogram-v2.onrender.com/",
+      githubUrl: "https://github.com/Raamprathap/Sociogram-v2",
       tech: [
-        { id: 1, name: "HTML", icon: <SiHtml5 /> },
-        { id: 2, name: "CSS", icon: <SiCss3 /> },
-        { id: 3, name: "JavaScript", icon: <SiJavascript /> },
+        { id: 1, name: "React", icon: <SiReact /> },
+        { id: 2, name: "Vite", icon: <SiVite /> },
+        { id: 3, name: "Tailwind CSS", icon: <SiTailwindcss /> },
         { id: 4, name: "Node.js", icon: <SiNodedotjs /> },
         { id: 5, name: "Express.js", icon: <SiExpress /> },
-        { id: 6, name: "WebSocket (Socket.IO)", icon: <SiSocketdotio /> },
+        { id: 6, name: "MongoDB", icon: <SiMongodb /> },
+        { id: 7, name: "TypeScript", icon: <SiTypescript /> },
       ],
       description:
-        "Post Accident Alert System is a real‑time road‑safety platform for clients, drivers, and hospitals. It features live dashboards, automated alerts, and real‑time tracking to ensure faster emergency response.",
+        "The second-generation full-stack version of Sociogram, rebuilt with a custom Node.js + Express backend and MongoDB database. Features real-time messaging via WebSockets, image uploads, secure authentication, and a scalable modular architecture.",
+    },
+
+    {
+      title: "First Path PAAS – Official Startup Website",
+      year: 2025,
+      image: "/projects/first-path.png",
+      liveUrl: "http://first-path.vercel.app/",
+      githubUrl: "https://github.com/Raamprathap/First-Path-PAAS",
+      tech: [
+        { id: 1, name: "React", icon: <SiReact /> },
+        { id: 2, name: "TypeScript", icon: <SiTypescript /> },
+        { id: 3, name: "Tailwind CSS", icon: <SiTailwindcss /> },
+      ],
+      description:
+        "The official website of First Path Health Solutions, designed and developed to showcase startup vision, services, and product offerings through a modern, responsive, and performance-optimized frontend architecture.",
+    },
+
+    // ===================== AI & ML PROJECTS =====================
+
+    {
+      title: "DeepSeek PDF Assistant",
+      year: 2025,
+      image: "",
+      liveUrl: "",
+      githubUrl: "https://github.com/Raamprathap/DeepSeek-PDF-Assistant",
+      tech: [
+        { id: 1, name: "Python", icon: <SiPython /> },
+        { id: 2, name: "LangChain", icon: <TbVector /> },
+        { id: 3, name: "FAISS", icon: <TbVector /> },
+        { id: 4, name: "Streamlit", icon: <SiStreamlit /> },
+      ],
+      description:
+        "An AI-powered semantic document assistant that converts PDFs into embeddings and enables contextual question-answering using vector similarity search.",
+    },
+
+    {
+      title: "UAV Face Recognition",
+      year: 2025,
+      image: "",
+      liveUrl: "",
+      githubUrl: "https://github.com/Raamprathap/UAV-Face_Recognition",
+      tech: [
+        { id: 1, name: "Python", icon: <SiPython /> },
+        { id: 2, name: "OpenCV", icon: <SiOpencv /> },
+        { id: 3, name: "Deep Learning", icon: <FaBrain /> },
+      ],
+      description:
+        "A drone-integrated face recognition system combining computer vision pipelines with deep neural networks for aerial identity detection.",
+    },
+
+    {
+      title: "Bird Species Classifier",
+      year: 2024,
+      image: "",
+      liveUrl: "",
+      githubUrl: "https://github.com/Raamprathap/Birds-Species-Classifier",
+      tech: [
+        { id: 1, name: "TensorFlow", icon: <SiTensorflow /> },
+        { id: 2, name: "Keras", icon: <SiKeras /> },
+        { id: 3, name: "Flask", icon: <SiFlask /> },
+      ],
+      description:
+        "A CNN-based image classifier trained on bird datasets and deployed via Flask to deliver real-time species predictions.",
+    },
+
+    {
+      title: "HairFastGAN (Research Implementation)",
+      year: 2025,
+      image: "",
+      liveUrl: "",
+      githubUrl: "https://github.com/Raamprathap/HairFastGAN",
+      tech: [
+        { id: 1, name: "GANs", icon: <FaBrain /> },
+        { id: 2, name: "Deep Learning", icon: <FaBrain /> },
+      ],
+      description:
+        "Implementation study of HairFastGAN for virtual hairstyle fitting, exploring generative adversarial networks for image transformation tasks.",
+    },
+
+    // ===================== PRODUCT & WEB PROJECTS =====================
+    {
+      title: "Learn and Exchange Platform",
+      year: 2025,
+      image: "",
+      liveUrl: "",
+      githubUrl:
+        "https://github.com/Adithya-Monish-Kumar-K/Learn-and-Exchange-Platform",
+      tech: [{ id: 1, name: "TypeScript", icon: <SiTypescript /> }],
+      description:
+        "A collaborative skill-exchange ecosystem enabling users to teach, learn, and connect through structured knowledge-sharing workflows.",
     },
     {
       title: "Ria Photography",
       year: 2024,
-      image: "assets/proj4.jpg",
-      liveUrl: "https://ria-photography.onrender.com",
+      image: "",
+      liveUrl: "",
       githubUrl: "https://github.com/Raamprathap/Ria-Photography",
       tech: [
         { id: 1, name: "HTML", icon: <SiHtml5 /> },
         { id: 2, name: "CSS", icon: <SiCss3 /> },
         { id: 3, name: "JavaScript", icon: <SiJavascript /> },
-        { id: 4, name: "Python", icon: <SiPython /> },
-        { id: 5, name: "Flask", icon: <SiFlask /> },
+        { id: 4, name: "Flask", icon: <SiFlask /> },
       ],
       description:
-        "RIA Photography is a studio site with an interactive gallery and booking system. Built with HTML, CSS, JavaScript, and Flask, it stores bookings in Google Sheets for easy client management.",
+        "A studio showcase website with integrated booking workflows storing appointment data via Google Sheets.",
     },
     {
-      title: "Bird‑Species‑Classifier",
+      title: "KitchenGPT",
+      year: 2025,
+      image: "",
+      liveUrl: "",
+      githubUrl: "https://github.com/Raamprathap/KitchenGPT",
+      tech: [
+        { id: 1, name: "JavaScript", icon: <SiJavascript /> },
+        { id: 2, name: "Node.js", icon: <SiNodedotjs /> },
+      ],
+      description:
+        "An AI-powered culinary assistant generating intelligent recipe suggestions and ingredient optimizations using prompt-based logic.",
+    },
+    {
+      title: "Music Bridge",
+      year: 2025,
+      image: "",
+      liveUrl: "",
+      githubUrl: "https://github.com/Raamprathap/Music-Bridge",
+      tech: [
+        { id: 1, name: "React", icon: <SiReact /> },
+        { id: 2, name: "TypeScript", icon: <SiTypescript /> },
+        { id: 3, name: "Vercel", icon: <SiVercel /> },
+      ],
+      description:
+        "An interactive web platform designed to help children develop habits through music-based learning experiences.",
+    },
+    {
+      title: "Scientific Calculator",
       year: 2024,
-      image: "assets/proj5.jpg",
-      liveUrl: "https://birds-species-classifier.onrender.com",
-      githubUrl: "https://github.com/Raamprathap/Birds-Species-Classifier",
+      image: "/projects/calc.png",
+      liveUrl: "https://scientific-calculator-nine-blush.vercel.app/",
+      githubUrl: "https://github.com/Raamprathap/Scientific-Calculator",
       tech: [
         { id: 1, name: "HTML", icon: <SiHtml5 /> },
         { id: 2, name: "CSS", icon: <SiCss3 /> },
         { id: 3, name: "JavaScript", icon: <SiJavascript /> },
-        { id: 4, name: "Python", icon: <SiPython /> },
-        { id: 5, name: "Flask", icon: <SiFlask /> },
-        { id: 6, name: "TensorFlow", icon: <SiTensorflow /> },
-        { id: 7, name: "Keras", icon: <SiKeras /> },
+        { id: 4, name: "Mathematical Logic", icon: <TbMath /> },
       ],
       description:
-        "A web app that classifies bird species from images using a deep‑learning model. Trained with TensorFlow/Keras and deployed via Flask, it lets users upload an image and returns the predicted species.",
+        "A fully functional scientific calculator built using JavaScript, supporting advanced mathematical operations, real-time expression evaluation, and responsive UI interactions.",
     },
   ];
   // const [updating, setUpdating] = useState(true);
@@ -221,7 +413,7 @@ export default function Projects() {
                   as="a"
                   href={project.githubUrl}
                   target="_blank"
-                  className="px-4 py-2 rounded-xl bg-[var(--button-primary-bg)] text-white text-xs font-bold" /*dark:bg-white dark:text-black*/
+                  className="px-4 py-2 rounded-xl bg-[var(--button-primary-bg)] text-[var(--button-primary-text-hover)] text-xs font-bold" /*dark:bg-white dark:text-black*/
                 >
                   GitHub
                 </CardItem>

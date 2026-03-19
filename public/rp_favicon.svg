@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <defs>
+    <style>
+      @keyframes pulse { 0%,100%{opacity:0.18} 50%{opacity:0.38} }
+      .glow-pulse { animation: pulse 3s ease-in-out infinite; }
+    </style>
+  </defs>
+
+  <!-- background -->
+  <rect width="100" height="100" rx="16" fill="#0c0c12"/>
+
+  <!-- angled parallelogram frame -->
+  <polygon points="14,8 88,4 92,92 18,96" fill="#111116" stroke="#f97316" stroke-width="1.8"/>
+
+  <!-- diagonal slash texture -->
+  <line x1="18" y1="96" x2="40" y2="4"  stroke="#f97316" stroke-width="0.5" opacity="0.13"/>
+  <line x1="44" y1="96" x2="66" y2="4"  stroke="#f97316" stroke-width="0.5" opacity="0.09"/>
+  <line x1="70" y1="96" x2="88" y2="18" stroke="#f97316" stroke-width="0.5" opacity="0.06"/>
+
+  <!-- corner ticks — top-left -->
+  <line x1="14" y1="8"  x2="26" y2="7"  stroke="#f97316" stroke-width="1.8" stroke-linecap="round"/>
+  <line x1="14" y1="8"  x2="15" y2="20" stroke="#f97316" stroke-width="1.8" stroke-linecap="round"/>
+  <!-- corner ticks — top-right -->
+  <line x1="88" y1="4"  x2="76" y2="5"  stroke="#f97316" stroke-width="1.8" stroke-linecap="round"/>
+  <line x1="88" y1="4"  x2="87" y2="16" stroke="#f97316" stroke-width="1.8" stroke-linecap="round"/>
+  <!-- corner ticks — bottom-right -->
+  <line x1="92" y1="92" x2="80" y2="93" stroke="#f97316" stroke-width="1.8" stroke-linecap="round"/>
+  <line x1="92" y1="92" x2="91" y2="80" stroke="#f97316" stroke-width="1.8" stroke-linecap="round"/>
+  <!-- corner ticks — bottom-left -->
+  <line x1="18" y1="96" x2="30" y2="95" stroke="#f97316" stroke-width="1.8" stroke-linecap="round"/>
+  <line x1="18" y1="96" x2="19" y2="84" stroke="#f97316" stroke-width="1.8" stroke-linecap="round"/>
+
+  <!-- glow halo -->
+  <ellipse cx="50" cy="52" rx="28" ry="22" fill="#f97316" class="glow-pulse"/>
+
+  <!-- R — white -->
+  <text font-family="monospace" font-size="52" font-weight="700" fill="#ffffff" x="10" y="74">R</text>
+  <!-- P — orange -->
+  <text font-family="monospace" font-size="52" font-weight="700" fill="#f97316" x="46" y="74">P</text>
+
+  <!-- baseline rule -->
+  <line x1="13" y1="80" x2="90" y2="77" stroke="#f97316" stroke-width="0.9" opacity="0.5"/>
+
+  <!-- HUD tag -->
+  <text font-family="monospace" font-size="6" fill="#f97316" x="15" y="90" opacity="0.7">v1.0 // dev</text>
+</svg>
