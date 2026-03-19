@@ -49,7 +49,6 @@ export default function Projects() {
       description:
         "A distributed AI-driven career intelligence ecosystem integrating embeddings, live news ingestion, sentiment analysis, and browser automation agents to deliver geopolitical career insights.",
     },
-
     {
       title: "Soil2Sale",
       year: 2026,
@@ -66,7 +65,6 @@ export default function Projects() {
       description:
         "A scalable full-stack agricultural marketplace connecting farmers and buyers through real-time dashboards, transaction workflows, and backend-driven listing management.",
     },
-
     {
       title: "Post-Accident Alert System (Startup Idea)",
       year: 2024,
@@ -83,7 +81,6 @@ export default function Projects() {
       description:
         "A startup-oriented real-time accident detection and emergency broadcast system leveraging WebSockets and REST APIs to notify nearby hospitals instantly.",
     },
-
     {
       title: "MedConnect",
       year: 2026,
@@ -114,20 +111,30 @@ export default function Projects() {
         "A laboratory inventory management system designed to track electronic components and optimize internal asset management workflows.",
     },
     {
-      title: "Sociogram v1",
+      title: "First Path PAAS – Official Startup Website",
       year: 2025,
-      image: "",
-      liveUrl: "https://sociogram-v1.onrender.com/",
-      githubUrl: "https://github.com/Raamprathap/Sociogram-v1",
+      image: "/projects/first-path.png",
+      liveUrl: "http://first-path.vercel.app/",
+      githubUrl: "https://github.com/Raamprathap/First-Path-PAAS",
       tech: [
         { id: 1, name: "React", icon: <SiReact /> },
-        { id: 2, name: "Firebase", icon: <SiFirebase /> },
-        { id: 3, name: "JavaScript", icon: <SiJavascript /> },
+        { id: 2, name: "TypeScript", icon: <SiTypescript /> },
+        { id: 3, name: "Tailwind CSS", icon: <SiTailwindcss /> },
       ],
       description:
-        "The first version of Sociogram, a real-time social media chat platform built with React and Firebase. Implemented authentication, Firestore-based live messaging, and user-based message synchronization.",
+        "The official website of First Path Health Solutions, designed and developed to showcase startup vision, services, and product offerings through a modern, responsive, and performance-optimized frontend architecture.",
     },
-
+    {
+      title: "Learn and Exchange Platform",
+      year: 2025,
+      image: "",
+      liveUrl: "",
+      githubUrl:
+        "https://github.com/Adithya-Monish-Kumar-K/Learn-and-Exchange-Platform",
+      tech: [{ id: 1, name: "TypeScript", icon: <SiTypescript /> }],
+      description:
+        "A collaborative skill-exchange ecosystem enabling users to teach, learn, and connect through structured knowledge-sharing workflows.",
+    },
     {
       title: "Sociogram v2",
       year: 2025,
@@ -146,24 +153,20 @@ export default function Projects() {
       description:
         "The second-generation full-stack version of Sociogram, rebuilt with a custom Node.js + Express backend and MongoDB database. Features real-time messaging via WebSockets, image uploads, secure authentication, and a scalable modular architecture.",
     },
-
     {
-      title: "First Path PAAS – Official Startup Website",
+      title: "Sociogram v1",
       year: 2025,
-      image: "/projects/first-path.png",
-      liveUrl: "http://first-path.vercel.app/",
-      githubUrl: "https://github.com/Raamprathap/First-Path-PAAS",
+      image: "",
+      liveUrl: "https://sociogram-v1.onrender.com/",
+      githubUrl: "https://github.com/Raamprathap/Sociogram-v1",
       tech: [
         { id: 1, name: "React", icon: <SiReact /> },
-        { id: 2, name: "TypeScript", icon: <SiTypescript /> },
-        { id: 3, name: "Tailwind CSS", icon: <SiTailwindcss /> },
+        { id: 2, name: "Firebase", icon: <SiFirebase /> },
+        { id: 3, name: "JavaScript", icon: <SiJavascript /> },
       ],
       description:
-        "The official website of First Path Health Solutions, designed and developed to showcase startup vision, services, and product offerings through a modern, responsive, and performance-optimized frontend architecture.",
+        "The first version of Sociogram, a real-time social media chat platform built with React and Firebase. Implemented authentication, Firestore-based live messaging, and user-based message synchronization.",
     },
-
-    // ===================== AI & ML PROJECTS =====================
-
     {
       title: "DeepSeek PDF Assistant",
       year: 2025,
@@ -179,7 +182,6 @@ export default function Projects() {
       description:
         "An AI-powered semantic document assistant that converts PDFs into embeddings and enables contextual question-answering using vector similarity search.",
     },
-
     {
       title: "UAV Face Recognition",
       year: 2025,
@@ -194,11 +196,10 @@ export default function Projects() {
       description:
         "A drone-integrated face recognition system combining computer vision pipelines with deep neural networks for aerial identity detection.",
     },
-
     {
       title: "Bird Species Classifier",
       year: 2024,
-      image: "",
+      image: "/projects/bsi.png",
       liveUrl: "",
       githubUrl: "https://github.com/Raamprathap/Birds-Species-Classifier",
       tech: [
@@ -222,19 +223,6 @@ export default function Projects() {
       ],
       description:
         "Implementation study of HairFastGAN for virtual hairstyle fitting, exploring generative adversarial networks for image transformation tasks.",
-    },
-
-    // ===================== PRODUCT & WEB PROJECTS =====================
-    {
-      title: "Learn and Exchange Platform",
-      year: 2025,
-      image: "",
-      liveUrl: "",
-      githubUrl:
-        "https://github.com/Adithya-Monish-Kumar-K/Learn-and-Exchange-Platform",
-      tech: [{ id: 1, name: "TypeScript", icon: <SiTypescript /> }],
-      description:
-        "A collaborative skill-exchange ecosystem enabling users to teach, learn, and connect through structured knowledge-sharing workflows.",
     },
     {
       title: "Ria Photography",
@@ -399,15 +387,17 @@ export default function Projects() {
                 <AnimatedTooltip items={project.tech} />
               </div>
               <div className="flex justify-between items-center mt-8">
-                <CardItem
-                  translateZ={20}
-                  as="a"
-                  href={project.liveUrl}
-                  target="_blank"
-                  className="px-4 py-2 rounded-xl text-xs text-[var(--text-primary)] font-normal underline" /*dark:text-white*/
-                >
-                  Live Demo →
-                </CardItem>
+                {project.liveUrl != "" && 
+                  (<CardItem
+                    translateZ={20}
+                    as="a"
+                    href={project.liveUrl}
+                    target="_blank"
+                    className="px-4 py-2 rounded-xl text-xs text-[var(--text-primary)] font-normal underline" /*dark:text-white*/
+                  >
+                    Live Demo →
+                  </CardItem>)
+                }
                 <CardItem
                   translateZ={20}
                   as="a"
