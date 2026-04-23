@@ -349,6 +349,7 @@ export default function Projects() {
           Projects
         </h1>
       </div>
+      <div></div>
       <div className="flex flex-wrap md:gap-4 justify-center">
         {projects.map((project, idx) => (
           <CardContainer className="inter-var" key={idx}>
