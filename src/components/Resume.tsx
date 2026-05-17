@@ -103,8 +103,8 @@ export default function Resume() {
         </div>
       </div>
 
-      <div className="flex flex-col gap-4">
-        <div className="bg-[var(--bg-card)] rounded-md shadow-xl p-6 hover:shadow-2xl transition-shadow duration-300">
+      <div className="flex flex-col gap-4 justify-center items-center">
+        <div className="bg-[var(--bg-card)] w-fit rounded-md shadow-xl p-6 hover:shadow-2xl transition-shadow duration-300">
           {loading && (
             <div className="flex justify-center items-center h-64 text-[var(--text-secondary)]">
               <i className="fa-solid fa-spinner fa-spin mr-2"></i> Loading PDF...
@@ -123,8 +123,8 @@ export default function Resume() {
             </div>
           )}
           {!loading && !error && (
-            <div className="w-full overflow-auto rounded-md">
-              <canvas ref={canvasRef} className="w-full h-auto block" />
+            <div className="w-full overflow-auto rounded-md flex justify-center items-center">
+              <canvas ref={canvasRef} className="w-[50rem] h-auto block" />
             </div>
           )}
         </div>
