@@ -33,6 +33,11 @@ export default function Navbar() {
             </NavLink>
           </li>
           <li>
+            <NavLink to="/feats" className={linkClass}>
+              Feats
+            </NavLink>
+          </li>
+          <li>
             <NavLink to="/resume" className={linkClass}>
               Resume
             </NavLink>
@@ -65,6 +70,7 @@ export default function Navbar() {
             { to: "/", label: "Home" },
             { to: "/about", label: "About" },
             { to: "/projects", label: "Projects" },
+            { to: "/feats", label: "Feats" },
             { to: "/resume", label: "Resume" },
             { to: "/contact", label: "Contact Me" },
           ].map(({ to, label }) => (
