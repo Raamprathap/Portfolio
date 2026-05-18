@@ -7,7 +7,9 @@ export default function Home() {
   const [roleIndex, setRoleIndex] = useState(0);
 
   const roles = [
+    "Software Developer",
     "Full-Stack Developer",
+    "Data Engineer",
     "Machine Learning Engineer",
     "UI/UX Enthusiast",
     "Problem Solver",
@@ -172,13 +174,13 @@ export default function Home() {
                 className="flex flex-wrap gap-4 mb-8"
               >
                 <a
-                  href="mailto:raamprathap17242@gmail.com"
+                  href="/contact"
                   className="flex-1 min-w-[150px] px-6 py-3 bg-transparent border-2 border-[var(--border-primary)] text-[var(--text-primary)] hover:bg-[var(--button-primary-hover)] hover:text-[var(--button-primary-text-hover)] font-semibold rounded-xl transition-all duration-300 text-center shadow-lg hover:shadow-[var(--button-primary-hover)]"
                 >
                   Get In Touch
                 </a>
                 <a
-                  href="#projects"
+                  href="/projects"
                   className="flex-1 min-w-[150px] px-6 py-3 bg-transparent border-2 border-[var(--border-primary)] text-[var(--text-primary)] hover:bg-[var(--button-primary-hover)] hover:text-[var(--button-primary-text-hover)] font-semibold rounded-xl transition-all duration-300 text-center shadow-lg hover:shadow-[var(--button-primary-hover)]"
                 >
                   View Projects

@@ -30,6 +30,7 @@ export default function Contact() {
         },
         (error) => {
           console.error("FAILED...", error);
+          setLoading(false);
           alert("Failed to send message. Try again.");
         },
       );
@@ -77,7 +78,7 @@ export default function Contact() {
             <FloatingDock items={links} />
           </p>
         </div>
-        <div className="shadow-input mx-auto w-full max-w-4xl rounded-lg bg-[var(--bg-card)] p-4 md:rounded-2xl md:p-8">
+        <div className="shadow-[18px_26px_60px_-18px_rgba(59,130,246,0.6)] mx-auto w-full max-w-4xl rounded-lg bg-[var(--bg-card)] border-2 border-[var(--accent-blue)] p-4 md:rounded-2xl md:p-8">
           <form
             className="my-8 flex flex-col md:flex-row space-x-5"
             ref={formRef}
@@ -132,7 +133,7 @@ export default function Contact() {
                 />
               </LabelInputContainer>
               <button
-                className="cursor-pointer group/btn relative block h-10 w-full rounded-md bg-gradient-to-br from-[var(--button-primary-bg)] via-[var(--accent-blue)] to-[var(--button-primary-bg)] font-medium text-white shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset]" //dark:bg-zinc-800 dark:from-zinc-900 dark:to-zinc-900 dark:shadow-[0px_1px_0px_0px_#27272a_inset,0px_-1px_0px_0px_#27272a_inset]
+                className="cursor-pointer group/btn relative block h-10 w-full rounded-md bg-gradient-to-br from-[var(--button-primary-text-hover)] via-[var(--button-primary-bg-dark)] to-[var(--accent-blue-dark)] font-medium text-white shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset]" //dark:bg-zinc-800 dark:from-zinc-900 dark:to-zinc-900 dark:shadow-[0px_1px_0px_0px_#27272a_inset,0px_-1px_0px_0px_#27272a_inset]
                 type="submit"
                 disabled={loading}
               >
