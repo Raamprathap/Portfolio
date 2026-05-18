@@ -230,173 +230,278 @@ export default function About() {
       ),
     },
     {
-      title: "Late 2024",
+      title: "Early 2025",
       content: (
         <div>
           <div className="mb-8 space-y-4 text-sm md:text-lg text-[var(--text-secondary)] leading-loose md:leading-relaxed">
             <p>
-              I began my internship at
+              My journey began with an internship at{" "}
               <strong className="mx-1 px-2 py-1 bg-[var(--accent-blue)] text-[var(--text-primary)] rounded-md shadow-sm">
                 1000Lookz
-              </strong>
-              during my 2ⁿᵈ year of B.Tech CSE at Amrita Vishwa Vidyapeetham.
-              This 4-month journey (Dec 2024 – Mar 2025) marked my first deep
-              dive into real-world product development.
+              </strong>{" "}
+              during my 2nd year of B.Tech CSE — my first real taste of product
+              development. Over 4 months, I worked across UI/UX design, GANs, and
+              RAG pipelines, learning what it means to ship things that actually work.
             </p>
             <p>
-              I actively collaborated with the development team and contributed
-              to multiple domains, including:
-              <ul className="list-disc ml-6 mt-2 space-y-1">
-                <li>
-                  <strong className="text-[var(--text-primary)]">
-                    UI/UX design
-                  </strong>{" "}
-                  – designing user-friendly interfaces
-                </li>
-                <li>
-                  <strong className="text-[var(--text-primary)]">
-                    Generative Adversarial Networks (GANs)
-                  </strong>{" "}
-                  – working on advanced machine learning pipelines
-                </li>
-                <li>
-                  <strong className="text-[var(--text-primary)]">
-                    Retrieval-Augmented Generation (RAG)
-                  </strong>{" "}
-                  – implementing modern AI retrieval techniques
-                </li>
-              </ul>
-            </p>
-            <p>
-              Throughout the internship, I honed both technical and analytical
-              skills while working in a collaborative and fast-paced
-              environment. Delivering quality outcomes within timelines was a
-              key part of my role — and a rewarding one.
+              Then came{" "}
+              <strong className="text-[var(--text-primary)]">Vertex Innovate 2025</strong>
+              {" "}— a 48-hour online hackathon by VIT Vellore. 250+ teams entered.
+              26 made the finals. We won — not just the hardware track, but the
+              overall title too. First hackathon win. It felt unreal.
             </p>
           </div>
-
-          <div className="grid grid-cols-2 gap-4">
+          <div className="flex gap-4">
             <img
-              src="/assets/ui-ux.jpg"
-              alt="UI/UX Design"
+              src="/vertex/image.png"
+              alt="Team at Vertex Innovate"
               width={500}
               height={500}
-              className="h-24 md:h-44 lg:h-60 w-full object-cover rounded-xl border border-[var(--border-secondary)] shadow-md"
+              className="h-24 md:h-44 lg:h-60 w-fit object-contain rounded-xl border border-[var(--border-secondary)] shadow-md"
             />
             <img
-              src="/assets/gan.jpg"
-              alt="Working with GANs"
+              src="/vertex/VIT Innovate.png"
+              alt="Vertex Innovate Win"
               width={500}
               height={500}
-              className="h-24 md:h-44 lg:h-60 w-full object-cover rounded-xl border border-[var(--border-secondary)] shadow-md"
+              className="h-24 md:h-44 lg:h-60 w-fit object-contain rounded-xl border border-[var(--border-secondary)] shadow-md"
             />
             <img
-              src="/assets/ai.jpg"
-              alt="AI Projects"
+              src="/vertex/1741889009270.jpeg"
+              alt="Team at Vertex Innovate"
               width={500}
               height={500}
-              className="h-24 md:h-44 lg:h-60 w-full object-cover rounded-xl border border-[var(--border-secondary)] shadow-md"
-            />
-            <img
-              src="/assets/team_collab.jpg"
-              alt="Team Collaboration"
-              width={500}
-              height={500}
-              className="h-24 md:h-44 lg:h-60 w-full object-cover rounded-xl border border-[var(--border-secondary)] shadow-md"
+              className="h-24 md:h-44 lg:h-60 w-fit object-contain rounded-xl border border-[var(--border-secondary)] shadow-md"
             />
           </div>
         </div>
       ),
     },
     {
-      title: "Mid 2025",
+      title: "Mid 2025",
       content: (
         <div>
           <div className="mb-8 space-y-4 text-sm md:text-lg text-[var(--text-secondary)] leading-loose md:leading-relaxed">
             <p>
-              I'm currently a&nbsp;
-              <strong className="inline-block px-2 py-1 rounded-md bg-[var(--accent-blue)] text-[var(--text-primary)] shadow-sm">
-                Full‑Stack&nbsp;Developer&nbsp;Intern
-              </strong>
-              &nbsp;at&nbsp;
-              <strong className="inline-block px-2 py-1 rounded-md bg-[var(--accent-blue)] text-[var(--text-primary)] shadow-sm">
-                Sudha&nbsp;Software&nbsp;Solutions
-              </strong>
-              , delivering production‑ready features from pixel‑perfect UIs to
-              secure APIs.
+              I joined{" "}
+              <strong className="mx-1 px-2 py-1 bg-[var(--accent-blue)] text-[var(--text-primary)] rounded-md shadow-sm">
+                Sudha Software Solutions
+              </strong>{" "}
+              as a Full Stack Developer Intern (May–July 2025). Two months of
+              building real, production-ready features — secure auth flows, CI/CD
+              pipelines, Cloudinary media storage — across 6+ scalable modules.
             </p>
-
             <p>
-              <span className="font-semibold">Frontend toolkit</span>: Next.js,
-              React, Tailwind CSS, Redux, Axios, Framer Motion
-              <br />
-              <span className="font-semibold">Backend stack</span>: Node.js,
-              Express, MongoDB, Zod, Cloudinary, Multer, Bcrypt, Passport,
-              Resend
-            </p>
-
-            <p>
-              The role has shown me how real‑world products move from idea ➜
-              spec ➜ code ➜ deployment, deepening my skills in versioned APIs,
-              authentication flows, and CI/CD pipelines.
+              I walked out as{" "}
+              <strong className="text-[var(--text-primary)]">Best Intern</strong> of
+              the cohort, with a Certified Full Stack Developer credential to go
+              with it. More importantly, I finally understood what it meant to build
+              software that other people depend on.
             </p>
           </div>
-
-          <div className="grid grid-cols-2 gap-4">
+          <div className="flex gap-4">
             <img
-              src="/assets/web.jpg"
-              alt="Building responsive UIs"
+              src="/sudha/cert.png"
+              alt="Sudha Software Internship"
               width={500}
               height={500}
-              className="h-24 md:h-44 lg:h-60 w-full object-cover rounded-xl border border-[var(--border-secondary)] shadow-md"
+              className="h-24 md:h-44 lg:h-60 w-fit object-contain rounded-xl border border-[var(--border-secondary)] shadow-md"
             />
             <img
-              src="/assets/api.jpg"
-              alt="API design in Postman"
+              src="/sudha/lor.png"
+              alt="Best Intern Award"
               width={500}
               height={500}
-              className="h-24 md:h-44 lg:h-60 w-full object-cover rounded-xl border border-[var(--border-secondary)] shadow-md"
-            />
-            <img
-              src="/assets/db.jpg"
-              alt="Database schema design"
-              width={500}
-              height={500}
-              className="h-24 md:h-44 lg:h-60 w-full object-cover rounded-xl border border-[var(--border-secondary)] shadow-md"
-            />
-            <img
-              src="/assets/review.jpg"
-              alt="Team stand‑up & code review"
-              width={500}
-              height={500}
-              className="h-24 md:h-44 lg:h-60 w-full object-cover rounded-xl border border-[var(--border-secondary)] shadow-md"
+              className="h-24 md:h-44 lg:h-60 w-fit object-contain rounded-xl border border-[var(--border-secondary)] shadow-md"
             />
           </div>
         </div>
       ),
     },
-    // {
-    //     title: "Achievements",
-    //     content: (
-    //         <div className="mb-8 space-y-4 text-sm md:text-lg text-neutral-800 leading-relaxed">
-    //             <h3 className="text-lg font-bold text-yellow-800 mb-2 flex items-center gap-2">
-    //                 Winner - Vertex Innovate '25
-    //             </h3>
-    //             <p className="text-sm md:text-base text-neutral-800 leading-relaxed">
-    //                 Secured <span className="font-semibold text-yellow-700">first place</span> at Vertex Innovate '25, a premier innovation contest hosted at Amrita Vishwa Vidyapeetham. Competing against top-tier student talent, our solution stood out for its innovation, technical depth, and real-world applicability.
-    //             </p>
-    //             <h3 className="text-lg font-bold text-yellow-800 mb-2 flex items-center gap-2">
-    //                 Shortlisted - Smart India Hackathon (SIH)
-    //             </h3>
-    //             <p className="text-sm md:text-base text-neutral-800 leading-relaxed">
-    //                 Among thousands of nationwide applicants, our team got <span className="font-semibold text-yellow-700">shortlisted for the Smart India Hackathon 2025</span> — India's largest innovation-driven event organized by the Government of India.
-    //             </p>
-    //             <p className="text-sm md:text-base text-neutral-700 mt-2">
-    //                 This milestone not only validated our problem-solving approach but also showcased our readiness to build high-impact, scalable solutions under pressure.
-    //             </p>
-    //         </div>
-    //     ),
-    // },
+    {
+      title: "Late 2025",
+      content: (
+        <div>
+          <div className="mb-8 space-y-4 text-sm md:text-lg text-[var(--text-secondary)] leading-loose md:leading-relaxed">
+            <p>
+              November 2025. I started as a{" "}
+              <strong className="mx-1 px-2 py-1 bg-[var(--accent-blue)] text-[var(--text-primary)] rounded-md shadow-sm">
+                Software Developer Intern at Telesto Energy
+              </strong>{" "}
+              — and this one was different. No tutorials could have prepared me for
+              handling massive SEG-Y seismic files, building cloud pipelines, and
+              rendering complex geoscientific data live in the browser.
+            </p>
+            <p>
+              By the end, the client reviewed the solution and signed off on it as{" "}
+              <strong className="text-[var(--text-primary)]">production-ready</strong>.
+              That sign-off meant everything.
+            </p>
+          </div>
+          <div className="flex gap-4">
+            <img
+              src="/telesto/visual.jpeg"
+              alt="Seismic Data Visualization"
+              width={500}
+              height={500}
+              className="h-24 md:h-44 lg:h-60 w-fit object-contain rounded-xl border border-[var(--border-secondary)] shadow-md"
+            />
+            <img
+              src="/telesto/ui.jpeg"
+              alt="UI"
+              width={500}
+              height={500}
+              className="h-24 md:h-44 lg:h-60 w-fit object-contain rounded-xl border border-[var(--border-secondary)] shadow-md"
+            />
+          </div>
+        </div>
+      ),
+    },
+    {
+      title: "January 2026",
+      content: (
+        <div>
+          <div className="mb-8 space-y-4 text-sm md:text-lg text-[var(--text-secondary)] leading-loose md:leading-relaxed">
+            <p>
+              January 7th. Anokha TechFair 2026 — Amrita's flagship national
+              techfest. I stood at our stall all day presenting{" "}
+              <strong className="text-[var(--text-primary)]">Growgle</strong> to
+              CEOs, researchers, and industry leaders. Hours of conversations about
+              impact, scalability, and the future of career intelligence. That
+              evening, I handed the stall over to my teammates and stepped away —
+              because the next morning, a different challenge was waiting.
+            </p>
+            <p>
+              January 8th.{" "}
+              <strong className="text-[var(--text-primary)]">Build2Break</strong> —
+              a 24-hour hackathon running parallel to the fest. Different team,
+              different problem, same intensity. We built through the night, broke
+              other teams' products, defended ours. By noon we presented. By
+              afternoon —{" "}
+              <strong className="text-[var(--text-primary)]">1st Place. ₹25,000.</strong>
+            </p>
+            <p>
+              Meanwhile, my Growgle teammates held the stall for all three days.
+              January 9th evening — the TechFair prize announcement. We were named{" "}
+              <strong className="text-[var(--text-primary)]">Runner-Up</strong> among
+              200+ projects. Two teams. Two prizes. One unforgettable week.
+            </p>
+          </div>
+          <div className="flex gap-4">
+            <img
+              src="/build2break/prize.jpg"
+              alt="Build2Break Hackathon"
+              width={500}
+              height={500}
+              className="h-24 md:h-44 lg:h-60 w-full object-cover rounded-xl border border-[var(--border-secondary)] shadow-md"
+            />
+            <img
+              src="/build2break/prize-grp.jpg"
+              alt="Build2Break Win"
+              width={500}
+              height={500}
+              className="h-24 md:h-44 lg:h-60 w-full object-cover rounded-xl border border-[var(--border-secondary)] shadow-md"
+            />
+            <img
+              src="/tech-fair/logo.jpeg"
+              alt="Growgle Prize Ceremony"
+              width={500}
+              height={500}
+              className="h-24 md:h-44 lg:h-60 w-full object-cover rounded-xl border border-[var(--border-secondary)] shadow-md"
+            />
+            <img
+              src="/tech-fair/prize.jpg"
+              alt="Growgle at Anokha TechFair"
+              width={500}
+              height={500}
+              className="h-24 md:h-44 lg:h-60 w-fit object-contain rounded-xl border border-[var(--border-secondary)] shadow-md"
+            />
+          </div>
+        </div>
+      ),
+    },
+    {
+      title: "Early 2026",
+      content: (
+        <div>
+          <div className="mb-8 space-y-4 text-sm md:text-lg text-[var(--text-secondary)] leading-loose md:leading-relaxed">
+            <p>
+              February 27th, 2026.{" "}
+              <strong className="mx-1 px-2 py-1 bg-[var(--accent-blue)] text-[var(--text-primary)] rounded-md shadow-sm">
+                Guidewire DEVTrails
+              </strong>{" "}
+              — a 45-day online hackathon — began. Thousands of teams. We built{" "}
+              <strong className="text-[var(--text-primary)]">Continuum</strong>, an
+              AI-powered parametric insurance platform for gig workers, guided by
+              mentors from Guidewire and Ernst & Young. After 45 days, only 5 teams
+              were selected as finalists.
+            </p>
+            <p>
+              We were one of them. And then came the part nobody tells you about
+              in hackathons — Guidewire flew us to{" "}
+              <strong className="text-[var(--text-primary)]">Bangalore</strong>,
+              put us up at the{" "}
+              <strong className="text-[var(--text-primary)]">Sheraton Grand</strong>,
+              took us to their offices and EY's offices for practice sessions, and
+              gave us three days of experiences that no classroom ever could. The
+              networking, the mentorship, the conversations — that was the real prize.
+            </p>
+            <p>
+              Then we presented at{" "}
+              <strong className="text-[var(--text-primary)]">DEVSummit</strong> —
+              and won{" "}
+              <strong className="text-[var(--text-primary)]">2nd Place. ₹1,50,000.</strong>{" "}
+              Selected from 18,000+ students, 4,400+ teams, across 30 universities
+              in India.
+            </p>
+            <p>
+              But before all of that — April 25–26 — we had competed in the{" "}
+              <strong className="mx-1 px-2 py-1 bg-[var(--accent-blue)] text-[var(--text-primary)] rounded-md shadow-sm">
+                Meta PyTorch OpenEnv Hackathon
+              </strong>{" "}
+              — a 36-hour offline finale at Scaler School of Technology, Bangalore,
+              shortlisted from 31,000+ teams. A completely new field for us. We
+              didn't win, but we left with something harder to measure — a deeper understanding of reinforcement learning and
+              what it feels like to compete at that level. Bangalore had given us a lot.
+              And somehow, the city wasn't finished with me yet — different team,
+              different problem, same city.
+            </p>
+          </div>
+          <div className="flex flex-col gap-4 lg:flex-row">
+            <div className="grid flex-1 min-w-0 grid-cols-1 gap-4 sm:grid-cols-3">
+              <img
+                src="/openenv/finale.jpg"
+                alt="Meta PyTorch OpenEnv Hackathon"
+                width={500}
+                height={500}
+                className="h-24 md:h-44 lg:h-60 w-full object-contain rounded-xl border border-[var(--border-secondary)] shadow-md"
+              />
+              <img
+                src="/devtrails/devsummit.jpg"
+                alt="DEVSummit"
+                width={500}
+                height={500}
+                className="h-24 md:h-44 lg:h-60 w-full object-contain rounded-xl border border-[var(--border-secondary)] shadow-md"
+              />
+              <img
+                src="/devtrails/EY-visit.jpg"
+                alt="DEVSummit Bangalore Experience"
+                width={500}
+                height={500}
+                className="h-24 md:h-44 lg:h-60 w-full object-cover rounded-xl border border-[var(--border-secondary)] shadow-md"
+              />
+            </div>
+            <img
+              src="/devtrails/prize.jpg"
+              alt="Guidewire DEVSummit 2nd Place"
+              width={500}
+              height={500}
+              className="h-24 md:h-44 lg:h-60 w-full object-cover rounded-xl border border-[var(--border-secondary)] shadow-md lg:max-w-xs xl:max-w-sm"
+            />
+          </div>
+        </div>
+      ),
+    },
   ];
 
   return (

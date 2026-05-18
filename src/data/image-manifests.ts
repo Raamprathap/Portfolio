@@ -4,38 +4,47 @@ export const IMAGE_MANIFESTS: Record<string, string[]> = {
     "/build2break/IMG-20260109-WA0025.jpg",
     "/build2break/IMG-20260111-WA0138.jpg",
     "/build2break/IMG-20260111-WA0172.jpg",
-    "/build2break/IMG-20260111-WA0179.jpg",
-    "/build2break/IMG-20260201-WA0044.jpg"
+    "/build2break/prize-grp.jpg",
+    "/build2break/prize.jpg"
   ],
   "devtrails": [
     "/devtrails/6a052fe2ce62f5d37d8e0803.jpg",
     "/devtrails/6a052fe2ce62f5d37d8e0806.jpg",
-    "/devtrails/IMG-20260511-WA0082.jpg",
-    "/devtrails/IMG-20260512-WA0017.jpg",
-    "/devtrails/IMG-20260514-WA0182.jpg",
+    "/devtrails/EY-visit.jpg",
     "/devtrails/IMG-20260514-WA0184.jpg",
     "/devtrails/IMG-20260514-WA0195.jpg",
     "/devtrails/IMG-20260515-WA0011.jpg",
     "/devtrails/IMG-20260515-WA0024.jpg",
     "/devtrails/IMG-20260515-WA0050.jpg",
-    "/devtrails/cert&sheild.png"
+    "/devtrails/cert&sheild.png",
+    "/devtrails/devsummit.jpg",
+    "/devtrails/prize.jpg"
   ],
   "openenv": [
     "/openenv/IMG-20260425-WA0014.jpg",
     "/openenv/IMG-20260425-WA0024.jpg",
     "/openenv/IMG-20260425-WA0031.jpg",
     "/openenv/IMG-20260425-WA0033.jpg",
-    "/openenv/IMG-20260425-WA0057.jpg"
+    "/openenv/finale.jpg"
+  ],
+  "sudha": [
+    "/sudha/cert.png",
+    "/sudha/lor.png"
   ],
   "tech-fair": [
-    "/tech-fair/1771613715167.jpeg",
-    "/tech-fair/IMG-20260109-WA0032.jpg",
     "/tech-fair/IMG-20260215-WA0006.jpg",
-    "/tech-fair/IMG-20260215-WA0007.jpg"
+    "/tech-fair/IMG-20260215-WA0007.jpg",
+    "/tech-fair/logo.jpeg",
+    "/tech-fair/prize.jpg"
+  ],
+  "telesto": [
+    "/telesto/ui.jpeg",
+    "/telesto/visual.jpeg"
   ],
   "vertex": [
     "/vertex/1741889009270.jpeg",
-    "/vertex/VIT Innovate.png"
+    "/vertex/VIT Innovate.png",
+    "/vertex/image.png"
   ]
 };
 
