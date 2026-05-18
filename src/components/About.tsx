@@ -253,7 +253,7 @@ export default function About() {
           </div>
           <div className="flex gap-4">
             <img
-              src="/vertex/image.png"
+              src="/1000Lookz/image.png"
               alt="Team at Vertex Innovate"
               width={500}
               height={500}

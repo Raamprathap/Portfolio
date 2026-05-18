@@ -1,4 +1,7 @@
 export const IMAGE_MANIFESTS: Record<string, string[]> = {
+  "1000Lookz": [
+    "/1000Lookz/image.png"
+  ],
   "build2break": [
     "/build2break/IMG-20260109-WA0023.jpeg",
     "/build2break/IMG-20260109-WA0025.jpg",
@@ -43,8 +46,7 @@ export const IMAGE_MANIFESTS: Record<string, string[]> = {
   ],
   "vertex": [
     "/vertex/1741889009270.jpeg",
-    "/vertex/VIT Innovate.png",
-    "/vertex/image.png"
+    "/vertex/VIT Innovate.png"
   ]
 };
 

@@ -81,7 +81,7 @@ function ImageCarousel({ images }: { images: string[] }) {
             key={src}
             src={src}
             alt={`Slide ${i + 1}`}
-            className={`absolute inset-0 w-full h-full object-cover transition-all duration-500 ease-in-out pointer-events-none ${getSlideClass(i)}`}
+            className={`absolute inset-0 w-full h-full object-contain transition-all duration-500 ease-in-out pointer-events-none ${getSlideClass(i)}`}
             loading="lazy"
           />
         ))}
