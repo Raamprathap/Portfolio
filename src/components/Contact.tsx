@@ -9,6 +9,26 @@ import emailjs from "@emailjs/browser";
 export default function Contact() {
   const formRef = useRef<HTMLFormElement>(null);
   const [loading, setLoading] = useState(false);
+  const [notification, setNotification] = useState<{
+    type: "success" | "error";
+    message: string;
+  } | null>(null);
+  const notificationTimerRef = useRef<number | null>(null);
+
+  const showNotification = (
+    type: "success" | "error",
+    message: string,
+  ) => {
+    if (notificationTimerRef.current) {
+      window.clearTimeout(notificationTimerRef.current);
+    }
+
+    setNotification({ type, message });
+    notificationTimerRef.current = window.setTimeout(() => {
+      setNotification(null);
+      notificationTimerRef.current = null;
+    }, 3000);
+  };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -27,11 +47,15 @@ export default function Contact() {
         () => {
           setLoading(false);
           formRef.current?.reset();
+          showNotification("success", "Mail sent successfully.");
         },
         (error) => {
           console.error("FAILED...", error);
           setLoading(false);
-          alert("Failed to send message. Try again.");
+          showNotification(
+            "error",
+            "Mail failed to send. The email service's free tier might have run out. I am working on it. Please email me directly using Gmail, Outlook, or any mail app.",
+          );
         },
       );
   };
@@ -61,6 +85,19 @@ export default function Contact() {
   ];
   return (
     <>
+      {notification ? (
+        <div className="fixed right-4 top-4 z-50 w-[calc(100vw-2rem)] max-w-sm rounded-2xl border border-[var(--border-secondary)] bg-[var(--bg-secondary)]/95 px-4 py-3 shadow-[0_18px_45px_-18px_rgba(59,130,246,0.55)] backdrop-blur-md">
+          <p
+            className={`text-sm font-medium ${
+              notification.type === "success"
+                ? "text-[var(--accent-green)]"
+                : "text-red-300"
+            }`}
+          >
+            {notification.message}
+          </p>
+        </div>
+      ) : null}
       <div className="text-center my-8">
         <h1 className="text-5xl text-[var(--text-primary)] kaushan-script-regular">
           Contact
