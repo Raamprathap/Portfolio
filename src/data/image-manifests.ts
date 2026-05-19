@@ -75,6 +75,17 @@ export const PROJECT_IMAGE_MANIFESTS: Record<string, string[]> = {
   "calc": [
     "/projects/calc/calc.png"
   ],
+  "continuum": [
+    "/projects/continuum/Screenshot 2026-05-19 at 1.10.06 PM.png",
+    "/projects/continuum/Screenshot 2026-05-19 at 1.10.13 PM.png",
+    "/projects/continuum/Screenshot 2026-05-19 at 1.10.22 PM.png",
+    "/projects/continuum/Screenshot 2026-05-19 at 1.10.27 PM.png",
+    "/projects/continuum/Screenshot 2026-05-19 at 1.10.33 PM.png",
+    "/projects/continuum/Screenshot 2026-05-19 at 1.10.40 PM.png",
+    "/projects/continuum/Screenshot 2026-05-19 at 1.10.43 PM.png",
+    "/projects/continuum/Screenshot 2026-05-19 at 1.10.52 PM.png",
+    "/projects/continuum/Screenshot 2026-05-19 at 1.10.57 PM.png"
+  ],
   "first-path": [
     "/projects/first-path/Screenshot 2026-05-17 at 11.52.26 AM.png",
     "/projects/first-path/Screenshot 2026-05-17 at 11.52.33 AM.png",
@@ -138,6 +149,18 @@ export const PROJECT_IMAGE_MANIFESTS: Record<string, string[]> = {
     "/projects/pass/Screenshot 2026-05-17 at 11.55.24 AM.png",
     "/projects/pass/Screenshot 2026-05-17 at 11.55.31 AM.png",
     "/projects/pass/Screenshot 2026-05-17 at 11.55.39 AM.png"
+  ],
+  "pragati": [
+    "/projects/pragati/PHOTO-2026-05-19-13-07-42 2.jpg",
+    "/projects/pragati/PHOTO-2026-05-19-13-07-42.jpg",
+    "/projects/pragati/PHOTO-2026-05-19-13-07-43.jpg",
+    "/projects/pragati/Screenshot 2026-05-19 at 1.04.17 PM.png",
+    "/projects/pragati/Screenshot 2026-05-19 at 1.04.26 PM.png",
+    "/projects/pragati/Screenshot 2026-05-19 at 1.04.31 PM.png",
+    "/projects/pragati/Screenshot 2026-05-19 at 1.04.43 PM.png",
+    "/projects/pragati/Screenshot 2026-05-19 at 1.04.55 PM.png",
+    "/projects/pragati/Screenshot 2026-05-19 at 1.09.37 PM.png",
+    "/projects/pragati/Screenshot 2026-05-19 at 1.09.43 PM.png"
   ],
   "ria-photography": [
     "/projects/ria-photography/Screenshot 2026-05-17 at 1.04.59 PM.png",

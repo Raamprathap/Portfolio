@@ -23,10 +23,22 @@ import {
   SiHtml5,
   SiCss3,
   SiFlask,
+  SiFlutter,
+  SiDart,
+  SiFastapi,
+  SiApachekafka,
+  SiPostgresql,
+  SiVite,
+  SiReactrouter,
+  SiFramer,
+  SiZod,
+  SiRedux,
 } from "react-icons/si";
 import { TbVector, TbMath } from "react-icons/tb";
 import { FaBrain } from "react-icons/fa";
 import { GiArtificialIntelligence } from "react-icons/gi";
+
+let hasSeenLiveDemoDisclaimer = false;
 
 function ProjectCarousel({ images, alt }: { images: string[]; alt: string }) {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -76,7 +88,88 @@ function ProjectCarousel({ images, alt }: { images: string[]; alt: string }) {
 }
 
 export default function Projects() {
+  const [isDisclaimerOpen, setIsDisclaimerOpen] = useState(false);
+  const [pendingUrl, setPendingUrl] = useState("");
+
+  const openInNewTab = useCallback((url: string) => {
+    window.open(url, "_blank", "noopener,noreferrer");
+  }, []);
+
+  const handleDisclaimerClose = useCallback(() => {
+    if (!pendingUrl) {
+      setIsDisclaimerOpen(false);
+      return;
+    }
+
+    openInNewTab(pendingUrl);
+    setIsDisclaimerOpen(false);
+    setPendingUrl("");
+    hasSeenLiveDemoDisclaimer = true;
+  }, [openInNewTab, pendingUrl]);
+
+  const handleLiveDemoClick = useCallback(
+    (url: string) => {
+      if (hasSeenLiveDemoDisclaimer) {
+        openInNewTab(url);
+        return;
+      }
+
+      setPendingUrl(url);
+      setIsDisclaimerOpen(true);
+    },
+    [openInNewTab],
+  );
+
+  useEffect(() => {
+    if (!isDisclaimerOpen) return;
+    const timeout = setTimeout(() => {
+      handleDisclaimerClose();
+    }, 5000);
+
+    return () => clearTimeout(timeout);
+  }, [handleDisclaimerClose, isDisclaimerOpen]);
+
   const projects = [
+    {
+      title: "Continuum – AI-Powered Parametric Insurance Platform",
+      year: 2026,
+      images: "continuum",
+      liveUrl: "https://continuum-live.vercel.app/",
+      githubUrl: "https://github.com/Raamprathap/Continuum",
+      tech: [
+        { id: 1, name: "Flutter", icon: <SiFlutter /> },
+        { id: 2, name: "Dart", icon: <SiDart /> },
+        { id: 3, name: "Next.js", icon: <SiNextdotjs /> },
+        { id: 4, name: "Node.js", icon: <SiNodedotjs /> },
+        { id: 5, name: "FastAPI", icon: <SiFastapi /> },
+        { id: 6, name: "Kafka", icon: <SiApachekafka /> },
+        { id: 7, name: "PostgreSQL", icon: <SiPostgresql /> },
+        { id: 8, name: "MongoDB", icon: <SiMongodb /> },
+        { id: 9, name: "Firebase", icon: <SiFirebase /> },
+        { id: 10, name: "Docker", icon: <SiDocker /> },
+      ],
+      description:
+        "A full-stack parametric insurance platform that automatically detects income-disrupting events — app outages, severe weather, municipal lockdowns — using a multi-oracle consensus engine and pays out directly to gig workers' UPI wallets. Built with Flutter/Dart for the delivery partner app, Next.js for the executive dashboard, Kafka for real-time event streaming, and CockroachDB as a distributed financial ledger. 2nd Place at Guidewire DEVTrails out of 18,000+ students across 30 universities, mentored by EY and Guidewire engineers.",
+    },
+    {
+      title: "Pragati – Official Website for ASB's National B-Fest",
+      year: 2026,
+      images: "pragati",
+      liveUrl: "https://pragati.amrita.edu/",
+      githubUrl: "https://github.com/Raamprathap/Am.Pragati-26",
+      tech: [
+        { id: 1, name: "React", icon: <SiReact /> },
+        { id: 2, name: "TypeScript", icon: <SiTypescript /> },
+        { id: 3, name: "Vite", icon: <SiVite /> },
+        { id: 4, name: "TanStack Router", icon: <SiReactrouter /> },
+        { id: 5, name: "Tailwind CSS", icon: <SiTailwindcss /> },
+        { id: 6, name: "Zustand", icon: <SiRedux /> },
+        { id: 7, name: "Framer Motion", icon: <SiFramer /> },
+        { id: 8, name: "Zod", icon: <SiZod /> },
+      ],
+      description:
+        "Official website for Amrita School of Business's flagship national B-Fest, Pragati 2026. Selected as part of a handpicked student development team, we built and shipped the platform to production under the amrita.edu domain — serving as both an information portal and a full event registration system with integrated payment handling, built using TypeScript and TanStack Router.",
+    },
     {
       title: "Growgle – AI Geopolitical Career Intelligence Platform",
       year: 2025,
@@ -329,6 +422,38 @@ export default function Projects() {
 
   return (
     <>
+      {isDisclaimerOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm">
+          <div className="relative w-[92%] max-w-md -translate-y-6 rounded-2xl border border-[var(--border-secondary)] bg-gradient-to-b from-[var(--bg-card)] to-[var(--bg-secondary)] p-6 text-left shadow-2xl">
+            <button
+              type="button"
+              onClick={handleDisclaimerClose}
+              className="absolute right-3 top-3 rounded-full px-2 py-1 text-xs text-[var(--text-tertiary)] hover:text-[var(--text-primary)]"
+              aria-label="Close disclaimer"
+            >
+              x
+            </button>
+            <div className="flex items-start gap-3">
+              <div className="flex h-10 w-10 items-center justify-center rounded-full border border-[var(--border-primary)] bg-[var(--bg-tertiary)] text-sm font-bold text-[var(--text-primary)]">
+                i
+              </div>
+              <div className="flex-1">
+                <p className="text-sm font-semibold text-[var(--text-primary)]">
+                  Demo availability notice
+                </p>
+                <p className="mt-1 text-sm text-[var(--text-secondary)]">
+                  Some live demos run on free-tier services and may be asleep.
+                  If a demo does not load, contact me and I will bring it back
+                  online.
+                </p>
+                <p className="mt-3 text-xs text-[var(--text-tertiary)]">
+                  Redirecting in a moment...
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
       <div className="text-center mt-8 mb-4">
         <h1 className="text-5xl text-[var(--text-primary)] kaushan-script-regular">
           Projects
@@ -338,8 +463,9 @@ export default function Projects() {
       <div className="flex flex-wrap md:gap-4 justify-center">
         {projects.map((project, idx) => {
           const slideImages = project.images
-            ? PROJECT_IMAGE_MANIFESTS[project.images] ?? []
+            ? (PROJECT_IMAGE_MANIFESTS[project.images] ?? [])
             : [];
+          const techItems = project.tech ?? [];
 
           return (
             <CardContainer className="inter-var" key={idx}>
@@ -357,17 +483,10 @@ export default function Projects() {
                 </div>
                 <CardItem translateZ="100" className="w-full mt-2">
                   {slideImages.length > 1 ? (
-                    <ProjectCarousel
-                      images={slideImages}
-                      alt={project.title}
-                    />
+                    <ProjectCarousel images={slideImages} alt={project.title} />
                   ) : (
                     <img
-                      src={
-                        slideImages.length === 1
-                          ? slideImages[0]
-                          : ""
-                      }
+                      src={slideImages.length === 1 ? slideImages[0] : ""}
                       height="240"
                       width="400"
                       className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
@@ -382,17 +501,19 @@ export default function Projects() {
                 >
                   {project.description}
                 </CardItem>
-                <div className="flex flex-row items-center justify-end mb-10 w-full mt-15">
-                  <AnimatedTooltip items={project.tech} />
-                </div>
+                {techItems.length > 0 && (
+                  <div className="flex flex-row items-center justify-end mb-10 w-full mt-15">
+                    <AnimatedTooltip items={techItems} />
+                  </div>
+                )}
                 <div className="flex justify-between items-center mt-8">
                   {project.liveUrl != "" && (
                     <CardItem
                       translateZ={20}
-                      as="a"
-                      href={project.liveUrl}
-                      target="_blank"
-                      className="px-4 py-2 rounded-xl text-xs text-[var(--text-primary)] font-normal underline"
+                      as="button"
+                      type="button"
+                      onClick={() => handleLiveDemoClick(project.liveUrl)}
+                      className="px-4 py-2 rounded-xl text-xs text-[var(--text-primary)] font-normal underline cursor-pointer"
                     >
                       Live Demo →
                     </CardItem>
