@@ -70,7 +70,7 @@ export default function Home() {
               transition={{ duration: 1 }}
             >
               <img
-                src="/assets/banner.jpg"
+                src="https://wccmvdkmyn.ufs.sh/f/oqmVdi5RbuPelx1GoMK1yOtv8G5sgzVQHZEbh6cBJuefl407"
                 alt="Banner"
                 className="absolute inset-0 w-full h-full object-cover object-center"
                 style={{ zIndex: 0 }}
@@ -93,7 +93,7 @@ export default function Home() {
                   <div className="relative inline-block">
                     <div className="w-32 h-32 md:w-40 md:h-40 rounded-full border-4 border-gray-900 overflow-hidden bg-gradient-to-br from-gray-900 to-black shadow-2xl">
                       <img
-                        src="/assets/profile.png"
+                        src="https://wccmvdkmyn.ufs.sh/f/oqmVdi5RbuPeISy0rVOavoE5M0zaiR82SjLXUFlfQTBYdPNA"
                         alt="Profile"
                         className="w-full h-full object-cover object-[50%_25%]"
                       />

@@ -240,34 +240,37 @@ export default function About() {
                 1000Lookz
               </strong>{" "}
               during my 2nd year of B.Tech CSE — my first real taste of product
-              development. Over 4 months, I worked across UI/UX design, GANs, and
-              RAG pipelines, learning what it means to ship things that actually work.
+              development. Over 4 months, I worked across UI/UX design, GANs,
+              and RAG pipelines, learning what it means to ship things that
+              actually work.
             </p>
             <p>
               Then came{" "}
-              <strong className="text-[var(--text-primary)]">Vertex Innovate 2025</strong>
-              {" "}— a 48-hour online hackathon by VIT Vellore. 250+ teams entered.
+              <strong className="text-[var(--text-primary)]">
+                Vertex Innovate 2025
+              </strong>{" "}
+              — a 48-hour online hackathon by VIT Vellore. 250+ teams entered.
               26 made the finals. We won — not just the hardware track, but the
               overall title too. First hackathon win. It felt unreal.
             </p>
           </div>
           <div className="flex gap-4">
             <img
-              src="/1000Lookz/image.png"
+              src="https://wccmvdkmyn.ufs.sh/f/oqmVdi5RbuPeTm0r7F1mPqhtG3OwVus1n8WozFHKgc5l2xkI"
               alt="Team at Vertex Innovate"
               width={500}
               height={500}
               className="h-24 md:h-44 lg:h-60 w-fit object-contain rounded-xl border border-[var(--border-secondary)] shadow-md"
             />
             <img
-              src="/vertex/VIT Innovate.png"
+              src="https://wccmvdkmyn.ufs.sh/f/oqmVdi5RbuPeEAt1scnKSysQBixTL1tdJOcmXD59CafhYvqg"
               alt="Vertex Innovate Win"
               width={500}
               height={500}
               className="h-24 md:h-44 lg:h-60 w-fit object-contain rounded-xl border border-[var(--border-secondary)] shadow-md"
             />
             <img
-              src="/vertex/1741889009270.jpeg"
+              src="https://wccmvdkmyn.ufs.sh/f/oqmVdi5RbuPeNODm32YJMbZFmxjQIEkOLrzd6f8Vu7ptTiDq"
               alt="Team at Vertex Innovate"
               width={500}
               height={500}
@@ -288,27 +291,30 @@ export default function About() {
                 Sudha Software Solutions
               </strong>{" "}
               as a Full Stack Developer Intern (May–July 2025). Two months of
-              building real, production-ready features — secure auth flows, CI/CD
-              pipelines, Cloudinary media storage — across 6+ scalable modules.
+              building real, production-ready features — secure auth flows,
+              CI/CD pipelines, Cloudinary media storage — across 6+ scalable
+              modules.
             </p>
             <p>
               I walked out as{" "}
-              <strong className="text-[var(--text-primary)]">Best Intern</strong> of
-              the cohort, with a Certified Full Stack Developer credential to go
-              with it. More importantly, I finally understood what it meant to build
-              software that other people depend on.
+              <strong className="text-[var(--text-primary)]">
+                Best Intern
+              </strong>{" "}
+              of the cohort, with a Certified Full Stack Developer credential to
+              go with it. More importantly, I finally understood what it meant
+              to build software that other people depend on.
             </p>
           </div>
           <div className="flex gap-4">
             <img
-              src="/sudha/cert.png"
+              src="https://wccmvdkmyn.ufs.sh/f/oqmVdi5RbuPeodOGWfRbuPeEAz0V6tW1iyBmJh5NsDwFjLfk"
               alt="Sudha Software Internship"
               width={500}
               height={500}
               className="h-24 md:h-44 lg:h-60 w-fit object-contain rounded-xl border border-[var(--border-secondary)] shadow-md"
             />
             <img
-              src="/sudha/lor.png"
+              src="https://wccmvdkmyn.ufs.sh/f/oqmVdi5RbuPecfyOG18bhUNgkD0GePqK925liw8JE6yz3nVI"
               alt="Best Intern Award"
               width={500}
               height={500}
@@ -328,26 +334,30 @@ export default function About() {
               <strong className="mx-1 px-2 py-1 bg-[var(--accent-blue)] text-[var(--text-primary)] rounded-md shadow-sm">
                 Software Developer Intern at Telesto Energy
               </strong>{" "}
-              — and this one was different. No tutorials could have prepared me for
-              handling massive SEG-Y seismic files, building cloud pipelines, and
-              rendering complex geoscientific data live in the browser.
+              — and this one was different. No tutorials could have prepared me
+              for handling massive SEG-Y seismic files, building cloud
+              pipelines, and rendering complex geoscientific data live in the
+              browser.
             </p>
             <p>
-              By the end, the client reviewed the solution and signed off on it as{" "}
-              <strong className="text-[var(--text-primary)]">production-ready</strong>.
-              That sign-off meant everything.
+              By the end, the client reviewed the solution and signed off on it
+              as{" "}
+              <strong className="text-[var(--text-primary)]">
+                production-ready
+              </strong>
+              . That sign-off meant everything.
             </p>
           </div>
           <div className="flex gap-4">
             <img
-              src="/telesto/visual.jpeg"
+              src="https://wccmvdkmyn.ufs.sh/f/oqmVdi5RbuPeEy6buznKSysQBixTL1tdJOcmXD59CafhYvqg"
               alt="Seismic Data Visualization"
               width={500}
               height={500}
               className="h-24 md:h-44 lg:h-60 w-fit object-contain rounded-xl border border-[var(--border-secondary)] shadow-md"
             />
             <img
-              src="/telesto/ui.jpeg"
+              src="https://wccmvdkmyn.ufs.sh/f/oqmVdi5RbuPeX599RSLmelHAaJDkQKbMuwNTCsW5GOnXFItp"
               alt="UI"
               width={500}
               height={500}
@@ -366,51 +376,58 @@ export default function About() {
               January 7th. Anokha TechFair 2026 — Amrita's flagship national
               techfest. I stood at our stall all day presenting{" "}
               <strong className="text-[var(--text-primary)]">Growgle</strong> to
-              CEOs, researchers, and industry leaders. Hours of conversations about
-              impact, scalability, and the future of career intelligence. That
-              evening, I handed the stall over to my teammates and stepped away —
-              because the next morning, a different challenge was waiting.
+              CEOs, researchers, and industry leaders. Hours of conversations
+              about impact, scalability, and the future of career intelligence.
+              That evening, I handed the stall over to my teammates and stepped
+              away — because the next morning, a different challenge was
+              waiting.
             </p>
             <p>
               January 8th.{" "}
-              <strong className="text-[var(--text-primary)]">Build2Break</strong> —
-              a 24-hour hackathon running parallel to the fest. Different team,
-              different problem, same intensity. We built through the night, broke
-              other teams' products, defended ours. By noon we presented. By
-              afternoon —{" "}
-              <strong className="text-[var(--text-primary)]">1st Place. ₹25,000.</strong>
+              <strong className="text-[var(--text-primary)]">
+                Build2Break
+              </strong>{" "}
+              — a 24-hour hackathon running parallel to the fest. Different
+              team, different problem, same intensity. We built through the
+              night, broke other teams' products, defended ours. By noon we
+              presented. By afternoon —{" "}
+              <strong className="text-[var(--text-primary)]">
+                1st Place. ₹25,000.
+              </strong>
             </p>
             <p>
               Meanwhile, my Growgle teammates held the stall for all three days.
-              January 9th evening — the TechFair prize announcement. We were named{" "}
-              <strong className="text-[var(--text-primary)]">Runner-Up</strong> among
-              200+ projects. Two teams. Two prizes. One unforgettable week.
+              January 9th evening — the TechFair prize announcement. We were
+              named{" "}
+              <strong className="text-[var(--text-primary)]">Runner-Up</strong>{" "}
+              among 200+ projects. Two teams. Two prizes. One unforgettable
+              week.
             </p>
           </div>
           <div className="flex gap-4">
             <img
-              src="/build2break/prize.jpg"
+              src="https://wccmvdkmyn.ufs.sh/f/oqmVdi5RbuPeFC71gQ3A3f1dGMHZD6EwgzB8JcpnVXPbaSQ2"
               alt="Build2Break Hackathon"
               width={500}
               height={500}
               className="h-24 md:h-44 lg:h-60 w-full object-cover rounded-xl border border-[var(--border-secondary)] shadow-md"
             />
             <img
-              src="/build2break/prize-grp.jpg"
+              src="https://wccmvdkmyn.ufs.sh/f/oqmVdi5RbuPeLEn3JhNt9mUpqCf5FNS38OBnQyYEXvsJh1cG"
               alt="Build2Break Win"
               width={500}
               height={500}
               className="h-24 md:h-44 lg:h-60 w-full object-cover rounded-xl border border-[var(--border-secondary)] shadow-md"
             />
             <img
-              src="/tech-fair/logo.jpeg"
+              src="https://wccmvdkmyn.ufs.sh/f/oqmVdi5RbuPe7IRTlgh0hUkSLG5QYMwV4KZcNT1a678leizj"
               alt="Growgle Prize Ceremony"
               width={500}
               height={500}
               className="h-24 md:h-44 lg:h-60 w-full object-cover rounded-xl border border-[var(--border-secondary)] shadow-md"
             />
             <img
-              src="/tech-fair/prize.jpg"
+              src="https://wccmvdkmyn.ufs.sh/f/oqmVdi5RbuPeAnHKVzMqcSy758wan6PhRDH0E9ZpgvXmriVB"
               alt="Growgle at Anokha TechFair"
               width={500}
               height={500}
@@ -431,60 +448,66 @@ export default function About() {
                 Guidewire DEVTrails
               </strong>{" "}
               — a 45-day online hackathon — began. Thousands of teams. We built{" "}
-              <strong className="text-[var(--text-primary)]">Continuum</strong>, an
-              AI-powered parametric insurance platform for gig workers, guided by
-              mentors from Guidewire and Ernst & Young. After 45 days, only 5 teams
-              were selected as finalists.
+              <strong className="text-[var(--text-primary)]">Continuum</strong>,
+              an AI-powered parametric insurance platform for gig workers,
+              guided by mentors from Guidewire and Ernst & Young. After 45 days,
+              only 5 teams were selected as finalists.
             </p>
             <p>
               We were one of them. And then came the part nobody tells you about
               in hackathons — Guidewire flew us to{" "}
               <strong className="text-[var(--text-primary)]">Bangalore</strong>,
               put us up at the{" "}
-              <strong className="text-[var(--text-primary)]">Sheraton Grand</strong>,
-              took us to their offices and EY's offices for practice sessions, and
-              gave us three days of experiences that no classroom ever could. The
-              networking, the mentorship, the conversations — that was the real prize.
+              <strong className="text-[var(--text-primary)]">
+                Sheraton Grand
+              </strong>
+              , took us to their offices and EY's offices for practice sessions,
+              and gave us three days of experiences that no classroom ever
+              could. The networking, the mentorship, the conversations — that
+              was the real prize.
             </p>
             <p>
               Then we presented at{" "}
-              <strong className="text-[var(--text-primary)]">DEVSummit</strong> —
-              and won{" "}
-              <strong className="text-[var(--text-primary)]">2nd Place. ₹1,50,000.</strong>{" "}
-              Selected from 18,000+ students, 4,400+ teams, across 30 universities
-              in India.
+              <strong className="text-[var(--text-primary)]">DEVSummit</strong>{" "}
+              — and won{" "}
+              <strong className="text-[var(--text-primary)]">
+                2nd Place. ₹1,50,000.
+              </strong>{" "}
+              Selected from 18,000+ students, 4,400+ teams, across 30
+              universities in India.
             </p>
             <p>
               But before all of that — April 25–26 — we had competed in the{" "}
               <strong className="mx-1 px-2 py-1 bg-[var(--accent-blue)] text-[var(--text-primary)] rounded-md shadow-sm">
                 Meta PyTorch OpenEnv Hackathon
               </strong>{" "}
-              — a 36-hour offline finale at Scaler School of Technology, Bangalore,
-              shortlisted from 31,000+ teams. A completely new field for us. We
-              didn't win, but we left with something harder to measure — a deeper understanding of reinforcement learning and
-              what it feels like to compete at that level. Bangalore had given us a lot.
-              And somehow, the city wasn't finished with me yet — different team,
-              different problem, same city.
+              — a 36-hour offline finale at Scaler School of Technology,
+              Bangalore, shortlisted from 31,000+ teams. A completely new field
+              for us. We didn't win, but we left with something harder to
+              measure — a deeper understanding of reinforcement learning and
+              what it feels like to compete at that level. Bangalore had given
+              us a lot. And somehow, the city wasn't finished with me yet —
+              different team, different problem, same city.
             </p>
           </div>
           <div className="flex flex-col gap-4 lg:flex-row">
             <div className="grid flex-1 min-w-0 grid-cols-1 gap-4 sm:grid-cols-3">
               <img
-                src="/openenv/finale.jpg"
+                src="https://wccmvdkmyn.ufs.sh/f/oqmVdi5RbuPeiwQs64YwFSNQA1fs5MdBW6eqyJizH2u8r4Ev"
                 alt="Meta PyTorch OpenEnv Hackathon"
                 width={500}
                 height={500}
                 className="h-24 md:h-44 lg:h-60 w-full object-contain rounded-xl border border-[var(--border-secondary)] shadow-md"
               />
               <img
-                src="/devtrails/devsummit.jpg"
+                src="https://wccmvdkmyn.ufs.sh/f/oqmVdi5RbuPeQaXro0MwLvRdDrG7OWiaUx2bwTmFPzt35S8s"
                 alt="DEVSummit"
                 width={500}
                 height={500}
                 className="h-24 md:h-44 lg:h-60 w-full object-contain rounded-xl border border-[var(--border-secondary)] shadow-md"
               />
               <img
-                src="/devtrails/EY-visit.jpg"
+                src="https://wccmvdkmyn.ufs.sh/f/oqmVdi5RbuPeWhhwzeXPSeYshZuGjI4BFitT6yNmvlAP8w29"
                 alt="DEVSummit Bangalore Experience"
                 width={500}
                 height={500}
@@ -492,7 +515,7 @@ export default function About() {
               />
             </div>
             <img
-              src="/devtrails/prize.jpg"
+              src="https://wccmvdkmyn.ufs.sh/f/oqmVdi5RbuPeqb1u9fsP0N7S2COQneUx5kbpo9BWFgMjHZfT"
               alt="Guidewire DEVSummit 2nd Place"
               width={500}
               height={500}
