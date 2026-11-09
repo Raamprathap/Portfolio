@@ -2,6 +2,7 @@ import { useEffect, useState, useCallback } from "react";
 import { CardBody, CardContainer, CardItem } from "./ui/3d-card";
 import { AnimatedTooltip } from "./ui/animated-tooltip";
 import { PROJECT_IMAGE_MANIFESTS } from "../data/image-manifests";
+import Snowfall from "react-snowfall";
 import {
   SiNextdotjs,
   SiNodedotjs,
@@ -422,6 +423,16 @@ export default function Projects() {
 
   return (
     <>
+      <Snowfall
+            style={{
+              position: 'fixed',
+              width: '100vw',
+              height: '100vh',
+              zIndex: 9999,      // Ensures it floats on top of background layers
+              pointerEvents: 'none' // Crucial: allows clicks to pass right through the canvas to buttons/links below
+            }}
+            snowflakeCount={150} // Adjust density (default is 150)
+          />
       {isDisclaimerOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm">
           <div className="relative w-[92%] max-w-md -translate-y-6 rounded-2xl border border-[var(--border-secondary)] bg-gradient-to-b from-[var(--bg-card)] to-[var(--bg-secondary)] p-6 text-left shadow-2xl">
@@ -481,19 +492,37 @@ export default function Projects() {
                     {project.year}
                   </span>
                 </div>
-                <CardItem translateZ="100" className="w-full mt-2">
-                  {slideImages.length > 1 ? (
-                    <ProjectCarousel images={slideImages} alt={project.title} />
-                  ) : (
-                    <img
-                      src={slideImages.length === 1 ? slideImages[0] : ""}
-                      height="240"
-                      width="400"
-                      className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
-                      alt={project.title}
-                    />
-                  )}
-                </CardItem>
+                <div>
+                  {project.liveUrl != "" ?
+                    (<CardItem translateZ="100" onClick={() => handleLiveDemoClick(project.liveUrl)} className="w-full mt-2 cursor-pointer">
+                      {slideImages.length > 1 ? (
+                        <ProjectCarousel images={slideImages} alt={project.title} />
+                      ) : (
+                        <img
+                          src={slideImages.length === 1 ? slideImages[0] : ""}
+                          height="240"
+                          width="400"
+                          className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
+                          alt={project.title}
+                        />
+                      )}
+                    </CardItem>)
+                    :
+                    (<CardItem translateZ="100" className="w-full mt-2 cursor-pointer">
+                      {slideImages.length > 1 ? (
+                        <ProjectCarousel images={slideImages} alt={project.title} />
+                      ) : (
+                        <img
+                          src={slideImages.length === 1 ? slideImages[0] : ""}
+                          height="240"
+                          width="400"
+                          className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
+                          alt={project.title}
+                        />
+                      )}
+                    </CardItem>)
+                  }
+                </div>
                 <CardItem
                   as="p"
                   translateZ="60"

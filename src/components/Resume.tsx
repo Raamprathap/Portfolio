@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import * as pdfjsLib from "pdfjs-dist";
+import Snowfall from "react-snowfall";
 
 // Pin worker version to match installed pdfjs-dist
 pdfjsLib.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjsLib.version}/pdf.worker.min.js`;
@@ -77,6 +78,16 @@ export default function Resume() {
 
   return (
     <div className="w-full mx-auto my-8 px-8 py-0 text-[var(--text-primary)]">
+      <Snowfall
+              style={{
+                position: 'fixed',
+                width: '100vw',
+                height: '100vh',
+                zIndex: 9999,      // Ensures it floats on top of background layers
+                pointerEvents: 'none' // Crucial: allows clicks to pass right through the canvas to buttons/links below
+              }}
+              snowflakeCount={150} // Adjust density (default is 150)
+            />
       <div className="text-center mb-8">
         <h1 className="text-5xl kaushan-script-regular">Resume</h1>
         <p className="text-lg mx-auto mt-4 text-[var(--text-secondary)]">

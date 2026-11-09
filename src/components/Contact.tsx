@@ -5,6 +5,7 @@ import React, { useRef, useState } from "react";
 import { FloatingDock } from "./ui/floating-dock";
 import { Github, Instagram, Linkedin, Mail } from "lucide-react";
 import emailjs from "@emailjs/browser";
+import Snowfall from "react-snowfall";
 
 export default function Contact() {
   const formRef = useRef<HTMLFormElement>(null);
@@ -85,6 +86,16 @@ export default function Contact() {
   ];
   return (
     <>
+      <Snowfall
+              style={{
+                position: 'fixed',
+                width: '100vw',
+                height: '100vh',
+                zIndex: 9999,      // Ensures it floats on top of background layers
+                pointerEvents: 'none' // Crucial: allows clicks to pass right through the canvas to buttons/links below
+              }}
+              snowflakeCount={150} // Adjust density (default is 150)
+            />
       {notification ? (
         <div className="fixed right-4 top-4 z-50 w-[calc(100vw-2rem)] max-w-sm rounded-2xl border border-[var(--border-secondary)] bg-[var(--bg-secondary)]/95 px-4 py-3 shadow-[0_18px_45px_-18px_rgba(59,130,246,0.55)] backdrop-blur-md">
           <p

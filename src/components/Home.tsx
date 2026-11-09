@@ -2,6 +2,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { FloatingDock } from "./ui/floating-dock";
 import { Github, Instagram, Linkedin, Mail, MapPin } from "lucide-react";
 import { useState, useEffect } from "react";
+import Snowfall from "react-snowfall";
 
 export default function Home() {
   const [roleIndex, setRoleIndex] = useState(0);
@@ -50,6 +51,16 @@ export default function Home() {
 
   return (
     <div className="relative min-h-screen w-full z-20 bg-[var(--bg-primary)] overflow-hidden">
+      <Snowfall
+        style={{
+          position: 'fixed',
+          width: '100vw',
+          height: '100vh',
+          zIndex: 9999,      // Ensures it floats on top of background layers
+          pointerEvents: 'none' // Crucial: allows clicks to pass right through the canvas to buttons/links below
+        }}
+        snowflakeCount={150} // Adjust density (default is 150)
+      />
       <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-[var(--bg-primary)] to-gray-900">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-blue-900/20 via-transparent to-transparent"></div>
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-purple-900/20 via-transparent to-transparent"></div>
